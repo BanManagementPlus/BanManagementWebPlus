@@ -609,7 +609,7 @@ $actions = array(
 if(file_exists('settings.php'))
 	include('settings.php');
 else
-	errors('You must rename settingsRename.php to settings.php');
+	errors('您必须将settingsRename.php重命名为settings.php');
 
 // IE8 frame busting, well thats the only good thing it has :P (Now supported by Firefox woot)
 if((isset($settings['iframe_protection']) && $settings['iframe_protection']) || !isset($settings['iframe_protection']))
