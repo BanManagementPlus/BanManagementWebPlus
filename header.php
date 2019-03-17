@@ -13,8 +13,8 @@ $nav = array(
 );
 if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$nav['管理中心'] = 'index.php?action=admin';
-	if($settings['multi-user']='true'){
-		$nav['个人中心'] = '';
+	if($settings['multi_user'] == 'true'){
+		$nav['个人中心'] = 'index.php?action=';
 	}
 	$nav['登出'] = 'index.php?action=logout';
 } else {
