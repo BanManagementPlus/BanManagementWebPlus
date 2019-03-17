@@ -13,6 +13,9 @@ $nav = array(
 );
 if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$nav['管理中心'] = 'index.php?action=admin';
+	if($settings['multi-user']='true'){
+		$nav['个人中心'] = '';
+	}
 	$nav['登出'] = 'index.php?action=logout';
 } else {
   $nav['登录后台']='index.php?action=admin';
