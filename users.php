@@ -1,3 +1,5 @@
-[admin]
-$admin['username'] = 'admin'
-$admin['password'] = ''
+<?php
+// [admin]
+$admin['username'] = 'admin';
+$admin['password'] = '';
+?>
