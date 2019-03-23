@@ -14,7 +14,7 @@ $nav = array(
 if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$nav['管理中心'] = 'index.php?action=admin';
 	if($settings['multi_user'] == 'true'){
-		$nav['个人中心'] = 'index.php?action=';
+		$nav['个人中心'] = 'index.php?action=usercenter';
 	}
 	$nav['登出'] = 'index.php?action=logout';
 } else {
@@ -25,7 +25,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-cn">
 	<head>
 		<meta charset="utf-8">
 		<title>Ban Management - 玩家封禁系统</title>
@@ -43,9 +43,9 @@ $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME
 		<!--[if lt IE 9]>
 		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<script src="https://cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
+		<script src="js/jquery.min.js"></script>
 		<script src="//<?php echo $path; ?>js/bootstrap.min.js"></script>
-		<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+		<script src="js/jquery.validate.min.js"></script>
 		<script src="//<?php echo $path; ?>js/heartcode-canvasloader-min.js"></script>
 		<script src="//<?php echo $path; ?>js/jquery.countdown.min.js"></script>
 		<script src="//<?php echo $path; ?>js/jquery.tablesorter.min.js"></script>
@@ -88,7 +88,8 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 						<?php
 						$request = basename($_SERVER['REQUEST_URI']);
 						foreach($nav as $name => $link) {
-							?><li<?php
+							?><li
+							<?php
 							if($request == $link)
 								echo ' class="active"';
 							?>><a href="<?php echo $link; ?>"><?php echo $name ?></a><?php
