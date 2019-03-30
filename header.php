@@ -23,12 +23,15 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 
 
 $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
+// about title
+if($settings['website_title'] == '')
+	$settings['website_title'] = 'Ban Management - 玩家封禁系统';
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 	<head>
 		<meta charset="utf-8">
-		<title>Ban Management - 玩家封禁系统</title>
+		<title><?php echo $settings['website_title']; ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
