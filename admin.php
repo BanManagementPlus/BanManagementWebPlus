@@ -341,7 +341,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 			<tbody>	
 				<tr>
 					<td>PHP版本</td>
-					<td><?php echo "PHP版本:".phpversion();?></td></td>
+					<td><?php echo .phpversion();?></td></td>
 				</tr>
 			</tbody>
 			<?php
