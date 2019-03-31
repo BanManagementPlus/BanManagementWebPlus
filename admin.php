@@ -330,11 +330,20 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 	<h3>其它事务</h3>
 	<a href="index.php?action=deletecache&authid=<?php echo sha1($settings['password']); ?>" class="btn btn-primary">清理缓存</a>
 	<h3>网站状态</h3>
-	<tr>
-		<td>PHP版本</td>
-		<td><?php echo "PHP版本:".phpversion();?></td>
-	</tr>
-	<?php
+	<form class="form-horizontal settings" action="" method="post">
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<th>项目</th>
+					<th>状态</th>
+				</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>PHP版本</td>
+				<td><?php echo "PHP版本:".phpversion();?></td>
+			</tr>
+			<?php
 }
 ?>
 <script src="//<?php echo $path; ?>js/admin.js"></script>
