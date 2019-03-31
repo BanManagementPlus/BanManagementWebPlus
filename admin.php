@@ -344,6 +344,10 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 					<td><?php echo phpversion();?></td>
 				</tr>
 			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">
+			</tfoot>
 		</table>
 	</form>
 			<?php
