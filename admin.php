@@ -331,6 +331,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 	<a href="index.php?action=deletecache&authid=<?php echo sha1($settings['password']); ?>" class="btn btn-primary">清理缓存</a>
 	<br />
 	<br />
+	<br />
 	<h3>网站状态</h3>
 	<form class="form-horizontal settings" action="" method="post">
 		<table class="table table-striped table-bordered table-hover">
