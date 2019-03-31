@@ -9,5 +9,5 @@ $settings['password'] = '';							#在这里设置你的管理员密码
 $settings['header_icon'] = '';
 $settings['website_title'] = '';                    #网站标题栏的标题,如果为空,内容将会"Ban Management - 玩家封禁系统"
 $settings['footer'] = '';			                #页脚修改,例如：(C) 2016 HayoStudio
-$settings['your_url_of_minecraft_server'] = '';     #页脚链接,例如：https://www.baidu.com
+$settings['footer_url'] = '';     #页脚链接,例如：https://www.baidu.com
 ?>
