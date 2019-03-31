@@ -219,7 +219,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 				</tr>
 				<tr>
 					<td>页脚版权链接</td>
-					<td><input type="text" name="footer" value="'.$settings['footer_url'].'" /></td>
+					<td><input type="text" name="footer_url" value="'.$settings['footer_url'].'" /></td>
 				</tr>
 				<tr>
 					<td>最新封禁</td>
