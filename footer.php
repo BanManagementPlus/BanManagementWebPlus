@@ -18,8 +18,11 @@
 			}
 			?>
 				<!-- Must not be removed as per the licence terms -->
-				<p class="pull-right">创作团队 By <a href="https://github.com/BanManagement" target="_blank">BanManagement</a></p><br />
-				<br /><p class="pull-right">技术&汉化 By <a href="http://www.mcbbs.net/?1691353" target="_blank">Xiao_Fang_He</a>和<a href='https://github.com/Mryan2005' target="_blank">Mr.yan</a></p>
+				<p class="pull-right">
+					创作团队 By <a href="https://github.com/BanManagement" target="_blank">BanManagement</a>
+					<br />
+					技术&汉化 By <a href="http://www.mcbbs.net/?1691353" target="_blank">Xiao_Fang_He</a>
+				</p>
 			</footer>
 		</div> <!-- /container -->
 		<script type="text/javascript">
