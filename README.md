@@ -5,7 +5,7 @@
 ### about admin page  
 ![admin-1](https://s2.ax1x.com/2019/03/31/ArRZOH.jpg)
 
-![admin-2](https://s2.ax1x.com/2019/03/31/ArRn0A.jpg)
+![admin-2](https://s2.ax1x.com/2019/03/31/ArWe3T.jpg)
 ### about login page  
 ![login-1](https://s2.ax1x.com/2019/03/31/ArRmmd.jpg)
 
