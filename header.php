@@ -28,6 +28,13 @@ if($settings['website_title'] == '')
 <html lang="zh-cn">
 	<head>
 		<meta charset="utf-8">
+		<?php
+		if($settings['header_icon'] == ''){
+			?><link rel="icon" href="img\header.ico" type="image/x-icon"/><?php
+		} else {
+			?><link rel="icon" href="<?php echo $settings['header_icon']; ?>" type="image/x-icon"/><?php
+		}
+		?>
 		<title><?php echo $settings['website_title']; ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
