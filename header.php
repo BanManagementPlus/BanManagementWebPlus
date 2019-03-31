@@ -13,9 +13,6 @@ $nav = array(
 );
 if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$nav['管理中心'] = 'index.php?action=admin';
-	if($settings['multi_user'] == 'true'){
-		$nav['个人中心'] = 'index.php?action=usercenter';
-	}
 	$nav['登出'] = 'index.php?action=logout';
 } else {
   $nav['登录后台']='index.php?action=admin';
@@ -23,12 +20,22 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 
 
 $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
+// about title
+if($settings['website_title'] == '')
+	$settings['website_title'] = 'Ban Management - 玩家封禁系统';
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 	<head>
 		<meta charset="utf-8">
-		<title>Ban Management - 玩家封禁系统</title>
+		<?php
+		if($settings['header_icon'] == ''){
+			?><link rel="icon" href="img\header.ico" type="image/x-icon"/><?php
+		} else {
+			?><link rel="icon" href="<?php echo $settings['header_icon']; ?>" type="image/x-icon"/><?php
+		}
+		?>
+		<title><?php echo $settings['website_title']; ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
