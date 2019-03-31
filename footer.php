@@ -11,10 +11,10 @@
 			<hr>
 			<footer>
 			<?php
-			if($settings['your_url_of_minecraft_server'] == ''){
+			if($settings['footer_url'] == ''){
 				?><p class="pull-left"><?php echo $settings['footer']; ?></p><?php
 			} else {
-				?><p class="pull-left"><a href="<?php echo $settings['your_url_of_minecraft_server']; ?>" target="_blank"><?php echo $settings['footer']; ?></a></p><?php
+				?><p class="pull-left"><a href="<?php echo $settings['footer_url']; ?>" target="_blank"><?php echo $settings['footer']; ?></a></p><?php
 			}
 			?>
 				<!-- Must not be removed as per the licence terms -->
