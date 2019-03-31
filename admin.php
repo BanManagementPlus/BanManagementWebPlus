@@ -352,7 +352,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 			</tfoot>
 		</table>
 	</form>
-			<?php
+<?php
 }
 ?>
 <script src="//<?php echo $path; ?>js/admin.js"></script>
