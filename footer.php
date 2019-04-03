@@ -22,6 +22,8 @@
 					创作团队 By <a href="https://github.com/BanManagement" target="_blank">BanManagement</a>
 					<br />
 					技术&汉化 By <a href="http://www.mcbbs.net/?1691353" target="_blank">Xiao_Fang_He</a>
+					<br />
+					plus版的编写 By <a href="https://weibo.com/u/6833082752?refer_flag=1005055010_" target="_blank">Mryan
 				</p>
 			</footer>
 		</div> <!-- /container -->
