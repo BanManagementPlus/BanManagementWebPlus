@@ -23,18 +23,14 @@ $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME
 // about title
 if($settings['website_title'] == '')
 	$settings['website_title'] = 'Ban Management - 玩家封禁系统';
+if($settings['header_icon'] == '')
+	$settings['header_icon'] ="img\header.ico"
 ?>
 <!DOCTYPE html>
 <html lang="zh-cn">
 	<head>
 		<meta charset="utf-8">
-		<?php
-		if($settings['header_icon'] == ''){
-			?><link rel="icon" href="img\header.ico" type="image/x-icon"/><?php
-		} else {
-			?><link rel="icon" href="<?php echo $settings['header_icon']; ?>" type="image/x-icon"/><?php
-		}
-		?>
+		<link rel="icon" href="<?php echo $settings['header_icon']; ?>" type="image/x-icon"/>
 		<title><?php echo $settings['website_title']; ?></title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
