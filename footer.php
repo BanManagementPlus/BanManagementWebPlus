@@ -10,16 +10,9 @@
 ?>
 			<hr>
 			<footer>
-			<?php
-			if($settings['footer_url'] == ''){
-				?><p class="pull-left"><?php echo $settings['footer']; ?></p><?php
-			} else {
-				?><p class="pull-left"><a href="<?php echo $settings['footer_url']; ?>" target="_blank"><?php echo $settings['footer']; ?></a></p><?php
-			}
-			?>
+				<p class="pull-left"><?php echo $settings['footer']; ?></p>
 				<!-- Must not be removed as per the licence terms -->
-				<p class="pull-right">创作团队 By <a href="https://github.com/BanManagement" target="_blank">BanManagement</a></p><br />
-				<br /><p class="pull-right">技术&汉化 By <a href="http://www.mcbbs.net/?1691353" target="_blank">Xiao_Fang_He</a>和<a href='https://github.com/Mryan2005' target="_blank">Mr.yan</a></p>
+				<p class="pull-right">技术&汉化 By <a href="http://www.mcbbs.net/uc_server/avatar.php?uid=1691353&size=small" target="_blank">Xiao_Fang_He</a></p>
 			</footer>
 		</div> <!-- /container -->
 		<script type="text/javascript">

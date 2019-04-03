@@ -20,22 +20,12 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 
 
 $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
-// about title
-if($settings['website_title'] == '')
-	$settings['website_title'] = 'Ban Management - 玩家封禁系统';
 ?>
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<?php
-		if($settings['header_icon'] == ''){
-			?><link rel="icon" href="img\header.ico" type="image/x-icon"/><?php
-		} else {
-			?><link rel="icon" href="<?php echo $settings['header_icon']; ?>" type="image/x-icon"/><?php
-		}
-		?>
-		<title><?php echo $settings['website_title']; ?></title>
+		<title>Ban Management - 玩家封禁系统</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
@@ -50,9 +40,9 @@ if($settings['website_title'] == '')
 		<!--[if lt IE 9]>
 		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<script src="js/jquery.min.js"></script>
+		<script src="https://cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
 		<script src="//<?php echo $path; ?>js/bootstrap.min.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
+		<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
 		<script src="//<?php echo $path; ?>js/heartcode-canvasloader-min.js"></script>
 		<script src="//<?php echo $path; ?>js/jquery.countdown.min.js"></script>
 		<script src="//<?php echo $path; ?>js/jquery.tablesorter.min.js"></script>
@@ -95,8 +85,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 						<?php
 						$request = basename($_SERVER['REQUEST_URI']);
 						foreach($nav as $name => $link) {
-							?><li
-							<?php
+							?><li<?php
 							if($request == $link)
 								echo ' class="active"';
 							?>><a href="<?php echo $link; ?>"><?php echo $name ?></a><?php

@@ -218,10 +218,6 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 					<td><input type="text" name="footer" value="'.$settings['footer'].'" /></td>
 				</tr>
 				<tr>
-					<td>页脚版权链接</td>
-					<td><input type="text" name="footer_url" value="'.$settings['footer_url'].'" /></td>
-				</tr>
-				<tr>
 					<td>最新封禁</td>
 					<td><input type="checkbox" name="latestbans"'.((isset($settings['latest_bans']) && $settings['latest_bans']) || !isset($settings['latest_bans']) ? ' checked="checked"' : '').' /></td>
 				</tr>
@@ -333,31 +329,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 	<br />
 	<h3>其它事务</h3>
 	<a href="index.php?action=deletecache&authid=<?php echo sha1($settings['password']); ?>" class="btn btn-primary">清理缓存</a>
-	<br />
-	<br />
-	<br />
-	<h3>网站状态</h3>
-	<form class="form-horizontal settings" action="" method="post">
-		<table class="table table-striped table-bordered table-hover">
-			<thead>
-				<tr>
-					<th>项目</th>
-					<th>状态</th>
-				</tr>
-			</thead>
-			<tbody>	
-				<tr>
-					<td>PHP版本</td>
-					<td><?php echo phpversion();?></td>
-				</tr>
-			</tbody>
-			<tfoot>
-				<tr>
-					<td colspan="2">
-			</tfoot>
-		</table>
-	</form>
-<?php
+	<?php
 }
 ?>
 <script src="//<?php echo $path; ?>js/admin.js"></script>
