@@ -218,10 +218,6 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 					<td><input type="text" name="footer" value="'.$settings['footer'].'" /></td>
 				</tr>
 				<tr>
-					<td>页脚版权链接</td>
-					<td><input type="text" name="footer_url" value="'.$settings['footer_url'].'" /></td>
-				</tr>
-				<tr>
 					<td>最新封禁</td>
 					<td><input type="checkbox" name="latestbans"'.((isset($settings['latest_bans']) && $settings['latest_bans']) || !isset($settings['latest_bans']) ? ' checked="checked"' : '').' /></td>
 				</tr>
