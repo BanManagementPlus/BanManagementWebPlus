@@ -1,5 +1,8 @@
 # BanManagement  
 ## status  
+|  Tag  |  V1.0  |  V1.1  | V1.2  |
+| ------ | ------ | ------ | ------ |
+|  status  |  ![](https://img.shields.io/github/downloads/BanManagementPlus/BanManagementWebPlus/V1.0/total.svg?style=popout-square)  |  ![](https://img.shields.io/github/downloads/BanManagementPlus/BanManagementWebPlus/V1.1/total.svg?style=popout-square)  |  ![](https://img.shields.io/github/downloads/BanManagementPlus/BanManagementWebPlus/V1.1/total.svg?style=popout-square)  |
 ![GitHub License](https://img.shields.io/github/license/Ban-Management/BanManagement.svg?style=popout-square)
 ## images
 ### about admin page  
