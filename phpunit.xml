@@ -1,7 +1,0 @@
-<phpunit>
-    <testsuites>
-        <testsuite name="BanManagementPlus">
-            <directory suffix=".php">src</directory>
-        </testsuite>
-    </testsuites>
-</phpunit>
