@@ -47,13 +47,14 @@ if($settings['header_icon'] == '')
 		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<script src="js/jquery.min.js"></script>
-		<script src="//<?php echo $path; ?>js/bootstrap.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
 		<script src="js/jquery.validate.min.js"></script>
-		<script src="//<?php echo $path; ?>js/heartcode-canvasloader-min.js"></script>
-		<script src="//<?php echo $path; ?>js/jquery.countdown.min.js"></script>
-		<script src="//<?php echo $path; ?>js/jquery.tablesorter.min.js"></script>
-		<script src="//<?php echo $path; ?>js/jquery.tablesorter.widgets.min.js"></script>
-		<script src="//<?php echo $path; ?>js/jquery.tablesorter.pager.min.js"></script><?php
+		<script src="js/heartcode-canvasloader-min.js"></script>
+		<script src="js/jquery.countdown.min.js"></script>
+		<script src="js/jquery.tablesorter.min.js"></script>
+		<script src="js/jquery.tablesorter.widgets.min.js"></script>
+		<script src="js/jquery.tablesorter.pager.min.js"></script>
+<?php
 if((isset($settings['iframe_protection']) && $settings['iframe_protection']) || !isset($settings['iframe_protection'])) {
 	echo '
 		<script type="text/javascript">
@@ -73,7 +74,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 }
 		?>
 		
-		<script src="//<?php echo $path; ?>js/core.js"></script>
+		<script src="js/core.js"></script>
 	</head>
 <?php
 if($settings['background'] == ''){
