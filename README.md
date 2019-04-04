@@ -1,6 +1,6 @@
 # BanManagement  
 ## status  
-![GitHub License](https://img.shields.io/github/license/Ban-Management/BanManagement.svg?style=popout-square)  ![Current Version](https://img.shields.io/github/release/BanManagementPlus/BanManagementWebPlus.svg?style=popout-square)  ![](.Github\svg\PHP-Version.svg)
+![GitHub License](https://img.shields.io/github/license/Ban-Management/BanManagement.svg?style=popout-square)  ![Current Version](https://img.shields.io/github/release/BanManagementPlus/BanManagementWebPlus.svg?style=popout-square)  ![](https://img.shields.io/badge/PHP-%3E%3D5.4-blue.svg)
 
 ## images
 ### about admin page  
