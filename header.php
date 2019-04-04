@@ -75,8 +75,14 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 		
 		<script src="//<?php echo $path; ?>js/core.js"></script>
 	</head>
-	<body>
-	     <body style="font-family: Microsoft YaHei">
+<?php
+if($settings['background'] == ''){
+	?><body><?php
+} else {
+	?><body background="<?php echo $settings['background']; ?>" style="background-size:100% 100%;background-attachment:fixed"><?php
+}
+?>
+	    <body style="font-family: Microsoft YaHei">
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 				<div class="container">
