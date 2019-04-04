@@ -1,7 +1,7 @@
-<phpunit bootstrap="./index.php">
+<phpunit>
     <testsuites>
-        <testsuite name="money">
-            <file>./home.php</file>
+        <testsuite name="BanManagementPlus">
+            <directory suffix=".php">./</directory>
         </testsuite>
     </testsuites>
 </phpunit>
