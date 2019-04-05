@@ -11,19 +11,23 @@
 			<hr>
 			<footer>
 			<?php
-			if($settings['footer_url'] == ''){
+			if($settings['footer'] == ''){
 				?><p class="pull-left"><?php echo $settings['footer']; ?></p><?php
 			} else {
-				?><p class="pull-left"><a href="<?php echo $settings['footer_url']; ?>" target="_blank"><?php echo $settings['footer']; ?></a></p><?php
+				if($settings['footer_url'] == ''){
+					?><p class="pull-left">Copyright (c) <?php echo $settings['footer']; ?></p><?php
+				} else {
+					?><p class="pull-left"><a href="<?php echo $settings['footer_url']; ?>" target="_blank">Copyright (c) <?php echo $settings['footer']; ?></a></p><?php
+				}
 			}
-			?>
+				?>
 				<!-- Must not be removed as per the licence terms -->
 				<p class="pull-right">
 					创作团队 By <a href="https://github.com/BanManagement" target="_blank">BanManagement</a>
 					<br />
 					技术&汉化 By <a href="http://www.mcbbs.net/?1691353" target="_blank">Xiao_Fang_He</a>
 					<br />
-					plus版的编写 By <a href="https://weibo.com/u/6833082752?refer_flag=1005055010_" target="_blank">Mryan
+					plus版的编写 By <a href="https://weibo.com/u/6833082752?refer_flag=1005055010_" target="_blank">Mr.yan
 				</p>
 			</footer>
 		</div> <!-- /container -->
