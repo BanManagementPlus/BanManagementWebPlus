@@ -1,0 +1,32 @@
+<?php
+$language['login'] = 'Sign In';
+$language['Server_Name'] = 'Server Name';
+$language['Options'] = 'Options';
+$language['Add_Server'] = 'Add Server';
+$language['MySQL_Host'] = 'MySQL Host';
+$language['MySQL_Database'] = 'MySQL Database';
+$language['MySQL_Username'] = 'MySQL Username';
+$language['MySQL_Password'] = 'MySQL Password';
+$language['Bans_Table'] = 'Bans Table';
+$language['Bans_Record_Table'] = 'Bans Record Table';
+$language['IP_Bans_Table'] = 'IP Bans Table';
+$language['IP_Record_Table'] = 'IP Record Table';
+$language['Mutes_Table'] = 'Mutes Table';
+$language['Mutes_Record_Table'] = 'Mutes Record Table';
+$language['Kicks_Table'] = 'Kicks Table';
+$language['Warnings_Table'] = 'Warnings Table';
+$language['Close'] = 'Close';
+$language[''] = '';
+$language[''] = '';
+$language[''] = '';
+$language[''] = '';
+$language[''] = '';
+$language[''] = '';
+$language[''] = '';
+$language[''] = '';
+$language[''] = '';
+$language[''] = '';
+$language[''] = '';
+$language[''] = '';
+$language[''] = '';
+?>
