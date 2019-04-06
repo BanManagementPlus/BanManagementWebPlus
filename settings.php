@@ -11,4 +11,5 @@ $settings['website_title'] = '';                    #网站标题栏的标题,�
 $settings['background'] = '';                       #网站背景，如果为空，背景将会为"白色"
 $settings['footer'] = '';			                #页脚修改,例如：2016 HayoStudio
 $settings['footer_url'] = '';                       #页脚链接,例如：https://www.baidu.com
+$settings['language'] = '';
 ?>
