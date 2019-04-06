@@ -6,13 +6,22 @@
         {
             "label": "build_website",
             "type": "shell",
-            "command": ".vscode\\test.bat",
+            "command": ".vscode\\script\\build_website.bat",
             "group": { 
                 "kind": "build",
                 "isDefault": true,   
                 // 任务分组，因为是tasks而不是task，意味着可以连着执行很多任务
                 // 在build组的任务们，可以通过在Command Palette(F1) 输入run build task来运行
                 // 当然，如果任务分组是test，你就可以用run test task来运行 
+            }
+        },
+        {
+            "label": "open_website",
+            "type": "shell",
+            "command": ".vscode\\script\\open_website.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": true,
             }
         }
     ]
