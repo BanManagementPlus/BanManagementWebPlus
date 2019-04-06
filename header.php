@@ -9,7 +9,8 @@
 */
 $nav = array(
 	'首页' => 'index.php',
-	'服务器列表' => 'index.php?action=servers'
+	'服务器列表' => 'index.php?action=servers',
+	'个人设置' =>  'index.php?action=PersonalSettings',
 );
 if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$nav['管理中心'] = 'index.php?action=admin';
@@ -21,9 +22,9 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 
 $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
 // about title
-if($settings['website_title'] == '')
+if(empty($settings['website_title']))
 	$settings['website_title'] = 'Ban Management - 玩家封禁系统';
-if($settings['header_icon'] == '')
+if(empty($settings['header_icon']))
 	$settings['header_icon'] ="img\header.ico"
 ?>
 <!DOCTYPE html>
@@ -77,7 +78,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 		<script src="js/core.js"></script>
 	</head>
 <?php
-if($settings['background'] == ''){
+if(empty($settings['background'])){
 	?><body><?php
 } else {
 	?><body background="<?php echo $settings['background']; ?>" style="background-size:100% 100%;background-attachment:fixed"><?php
