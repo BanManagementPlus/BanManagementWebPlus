@@ -28,7 +28,7 @@ if(empty($settings['header_icon']))
 	$settings['header_icon'] ="img\header.ico"
 ?>
 <!DOCTYPE html>
-<html lang="zh-cn">
+<html lang="<?php echo $settings['Default_language']; ?>">
 	<head>
 		<meta charset="utf-8">
 		<link rel="icon" href="<?php echo $settings['header_icon']; ?>" type="image/x-icon"/>
@@ -93,7 +93,7 @@ if(empty($settings['background'])){
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</a>
-					<a class="brand" href="index.php">玩家封禁系统</a>
+					<a class="brand" href="index.php"><?php echo $language['BanManagement']; ?></a>
 					<div class="nav-collapse">
 						<ul class="nav">
 						<?php

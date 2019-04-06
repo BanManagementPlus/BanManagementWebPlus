@@ -158,9 +158,9 @@ function latestWarnings($server, $serverID) {
 				if(isset($settings['submit_buttons_before_html']))
 					echo htmlspecialchars_decode($settings['submit_buttons_before_html'], ENT_QUOTES);
 				?>
-				<input type="submit" class="btn btn-primary" value="搜索" />
+				<input type="submit" class="btn btn-primary" value="<?php echo $language['Search']; ?>" />
 				<input type="hidden" name="action" value="searchplayer" />
-				<a href="#" class="btn" id="viewall">查看所有</a>
+				<a href="#" class="btn" id="viewall"><?php echo $language['Display_All']; ?></a>
 				<?php
 				if(isset($settings['submit_buttons_after_html']))
 					echo htmlspecialchars_decode($settings['submit_buttons_after_html'], ENT_QUOTES);
@@ -173,7 +173,7 @@ function latestWarnings($server, $serverID) {
 if(count($settings['servers']) > 1) {
 	if((isset($settings['latest_bans']) && $settings['latest_bans']) || !isset($settings['latest_bans'])) {
 ?>
-<h2>Latest Bans</h2>
+<h2><?php echo $language['Latest_Bans']; ?></h2>
 <?php
 		if(!empty($settings['servers'])) {
 			echo '
@@ -201,7 +201,7 @@ if(count($settings['servers']) > 1) {
 	if((isset($settings['latest_mutes']) && $settings['latest_mutes'])) {
 ?>
 <br />
-<h2>最新禁言</h2>
+<h2><?php echo $language['Latest_Mutes']; ?></h2>
 <?php
 		if(!empty($settings['servers'])) {
 			echo '
@@ -229,7 +229,7 @@ if(count($settings['servers']) > 1) {
 	if((isset($settings['latest_warnings']) && $settings['latest_warnings'])) {
 ?>
 <br />
-<h2>最新警告</h2>
+<h2><?php echo $language['Latest_warnings']; ?></h2>
 <?php
 		if(!empty($settings['servers'])) {
 			echo '

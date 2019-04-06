@@ -23,11 +23,16 @@
 				?>
 				<!-- Must not be removed as per the licence terms -->
 				<p class="pull-right">
-					创作团队 By <a href="https://github.com/BanManagement" target="_blank">BanManagement</a>
+					<?php echo $language['Created']; ?> By <a href="https://github.com/BanManagement" target="_blank">BanManagement</a>
+					<?php 
+					if($settings['Default_language'] == 'zh-CN'){
+						?><br />
+						技术&汉化 By <a href="http://www.mcbbs.net/?1691353" target="_blank">Xiao_Fang_He</a>
+						<?php
+					}
+					?>
 					<br />
-					技术&汉化 By <a href="http://www.mcbbs.net/?1691353" target="_blank">Xiao_Fang_He</a>
-					<br />
-					plus版的编写 By <a href="https://weibo.com/u/6833082752?refer_flag=1005055010_" target="_blank">Mr.yan
+					<?php echo $language['Plus_version_created_by']; ?> By <a href="https://weibo.com/u/6833082752?refer_flag=1005055010_" target="_blank">Mr.yan
 				</p>
 			</footer>
 		</div> <!-- /container -->

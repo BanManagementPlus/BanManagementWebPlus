@@ -1,5 +1,6 @@
 <?php
-$language['login'] = 'Sign In';
+// admin.php
+$language['Sign_In'] = 'Sign In';
 $language['Server_Name'] = 'Server Name';
 $language['Options'] = 'Options';
 $language['Add_Server'] = 'Add Server';
@@ -20,14 +21,30 @@ $language['Save'] = 'Save';
 $language['Homepage_Settings'] = 'Homepage Settings';
 $language['You_may_find_more_settings_in_settings_php'] = 'You may find more settings in settings.php';
 $language['Value'] = 'Value';
-$language[''] = '';
-$language[''] = '';
-$language[''] = '';
-$language[''] = '';
-$language[''] = '';
-$language[''] = '';
-$language[''] = '';
-$language[''] = '';
-$language[''] = '';
-$language[''] = '';
+$language['View_Player_Settings'] = 'View Player Settings';
+$language['Visible_Options'] = 'Visible Options';
+$language['other_matters'] = 'other matters';
+$language['Clear_Cache'] = 'Clear Cache';
+$language['go_back'] = 'Go Back';
+// header.php
+$language['BanManagement'] = 'Ban Management';
+// footer.php
+$language['Created'] = 'Created';
+$language['Plus_version_created_by'] = 'Plus version created by';
+// home.php
+$language['Latest_Bans'] = 'Latest Bans';
+$language['Latest_Mutes'] = 'Latest Mutes';
+$language['Latest_warnings'] = 'Latest warnings';
+$language['Display_All'] = 'Display All';
+$language['Search'] = 'Search';
+//$language['searchplayer'] = 'Search Player';
+//$language[''] = '';
+//$language[''] = '';
+//$language[''] = '';
+//$language[''] = '';
+//$language[''] = '';
+//$language[''] = '';
+//$language[''] = '';
+//$language[''] = '';
+//$language[''] = '';
 ?>

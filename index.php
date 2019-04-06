@@ -10,10 +10,13 @@
 session_start();
 ob_start();
 
-if(empty($settings['language']) || ($settings['language'] == 'en')){
-	include('language\Default.php');
-} elseif($settings['language'] == 'zh-hans') {
-	include('language\zh-CN.php');
+include("clearcache.php");
+if(empty($settings['Default_language']) || ($settings['Default_language'] == 'en')){
+	include('data\language\Basic_data\Default.php');
+	include('data\language\long_data\Default\admin_page.php');
+} elseif($settings['Default_language'] == 'zh-hans') {
+	include('data\language\Basic_data\zh-CN.php');
+	include('data\language\long_data\zh-CN\admin_page.php');
 }
 
 if(!isset($_SESSION['initiated'])) {

@@ -16,7 +16,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 } else if(!isset($_SESSION['admin']) && !isset($_POST['password'])) {
 	?><form action="" method="post" class="well form-inline">
     <input type="password" class="input-xlarge" name="password" placeholder="请输入密码">
-    <button type="submit" class="btn"><?php echo $language['login']; ?></button>
+    <button type="submit" class="btn"><?php echo $language['Sign_In']; ?></button>
     </form><?php
 } else if(isset($_POST['password']) && !isset($_SESSION['admin'])) {
 	if(htmlspecialchars_decode($_POST['password'], ENT_QUOTES) != $settings['password']) {
@@ -43,11 +43,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 		</thead>
 		<tbody><?php
 	if(empty($settings['servers']))
-		if(empty($settings['language']) || ($settings['language'] == 'en')){
-			echo '<tr id="noservers"><td colspan="2">No Servers Defined</td></tr>';
-		} elseif($settings['language'] == 'zh-hans') {
-			echo '<tr id="noservers"><td colspan="2">列表中没有服务器</td></tr>';
-		}
+		echo $admin_page['No_Servers_Defined'];
 	else {
 		$id = array_keys($settings['servers']);
 		$i = 0;
@@ -85,13 +81,13 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 			<tr>
 				<td colspan="2">
 		<?php
-	if(empty($settings['language']) || ($settings['language'] == 'en')){
+	if(empty($settings['Default_language']) || ($settings['Default_language'] == 'en')){
 		if(!is_writable('settings.php')) {
 			echo '<a class="btn btn-primary btn-large disabled" href="#addserver" title="Settings file not writable">Add Server</a>';
 		} else{
 			echo '<a class="btn btn-primary btn-large" href="#addserver" data-toggle="modal">Add Server</a>';
 		}
-	} else if($settings['language'] == 'zh-hans'){
+	} else if($settings['Default_language'] == 'zh-hans'){
 		if(!is_writable('settings.php')) {
 			echo '<a class="btn btn-primary btn-large disabled" href="#addserver" title="Settings file not writable">添加服务器</a>';
 		} else{
@@ -212,47 +208,11 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 			</thead>
 			<tbody>
 
-<?php // -------------------------------------------------------------------------   ?>
 	<?php
 	if(!is_writable('settings.php')) {
-		echo '
-				<tr>
-					<td colspan="2">settings.php can not be written to</td>
-				</tr>';
+		echo $admin_page['one_is_writable_Homepage_Settings'];
 	} else {
-		echo '
-				<tr>
-					<td>iFrame 保护（推荐开启）</td>
-					<td><input type="hidden" name="type" value="mainsettings" /><input type="checkbox" name="iframe"'.((isset($settings['iframe_protection']) && $settings['iframe_protection']) || !isset($settings['iframe_protection']) ? ' checked="checked"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>UTF8</td>
-					<td><input type="checkbox" name="utf8"'.(isset($settings['utf8']) && $settings['utf8'] ? ' checked="checked"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>页脚版权</td>
-					<td><input type="text" name="footer" value="'.$settings['footer'].'" /></td>
-				</tr>
-				<tr>
-					<td>最新封禁</td>
-					<td><input type="checkbox" name="latestbans"'.((isset($settings['latest_bans']) && $settings['latest_bans']) || !isset($settings['latest_bans']) ? ' checked="checked"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>最新禁言</td>
-					<td><input type="checkbox" name="latestmutes"'.(isset($settings['latest_mutes']) && $settings['latest_mutes'] ? ' checked="checked"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>最新警告</td>
-					<td><input type="checkbox" name="latestwarnings"'.(isset($settings['latest_warnings']) && $settings['latest_warnings'] ? ' checked="checked"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>网页按钮前缀</td>
-					<td><input type="text" name="buttons_before" value="'.(isset($settings['submit_buttons_before_html']) ? $settings['submit_buttons_before_html'] : '').'" /></td>
-				</tr>
-				<tr>
-					<td>网页按钮后缀</td>
-					<td><input type="text" name="buttons_after" value="'.(isset($settings['submit_buttons_after_html']) ? $settings['submit_buttons_after_html'] : '').'" /></td>
-				</tr>';
+		echo $admin_page['one_is_writable_Homepage_Settings'];
 	} ?>
 	
 			</tbody>
@@ -261,9 +221,9 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 					<td colspan="2">
 	<?php
 	if(!is_writable('settings.php')) {
-		echo '<input type="submit" class="btn btn-primary btn-large disabled" disabled="disabled" value="保存" />';
+		echo $admin_page['one_is_writable_save'];
 	} else {
-		echo '<input type="submit" class="btn btn-primary btn-large" value="保存" />';
+		echo $admin_page['two_is_writable_save'];
 	} ?>
 			
 					</td>
@@ -273,56 +233,21 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 	</form>
 	<br />
 	<br />
-	<h3>用户查询设置</h3>
+	<h3><?php echo$language['View_Player_Settings']; ?></h3>
 	<form class="form-horizontal settings" action="" method="post">
 		<table class="table table-striped table-bordered table-hover">
 			<thead>
 				<tr>
-					<th>可见选项</th>
-					<th>设定</th>
+					<th><?php echo $language['Visible_Options']; ?></th>
+					<th><?php echo $language['Value']; ?></th>
 				</tr>
 			</thead>
 			<tbody>
 	<?php
 	if(!is_writable('settings.php')) {
-		echo '
-				<tr>
-					<td colspan="2">settings.php can not be written to</td>
-				</tr>';
+		echo $admin_page['settings_file_can_not_be_written_to'];
 	} else {
-		echo '
-				<tr>
-					<td>最新封禁记录</td>
-					<td><input type="hidden" name="type" value="viewplayer" /><input type="checkbox" name="ban"'.((isset($settings['player_current_ban']) && $settings['player_current_ban']) || !isset($settings['player_current_ban']) ? ' checked="checked"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>最新封禁网页额外内容</td>
-					<td><input type="input" name="banextra"'.(isset($settings['player_current_ban_extra_html']) ? ' value="'.$settings['player_current_ban_extra_html'].'"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>最新禁言记录</td>
-					<td><input type="checkbox" name="mute"'.((isset($settings['player_current_mute']) && $settings['player_current_mute']) || !isset($settings['player_current_mute']) ? ' checked="checked"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>最新禁言网页额外内容</td>
-					<td><input type="input" name="muteextra"'.(isset($settings['player_current_mute_extra_html']) ? ' value="'.$settings['player_current_mute_extra_html'].'"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>以前的封禁记录</td>
-					<td><input type="checkbox" name="prevbans"'.((isset($settings['player_previous_bans']) && $settings['player_previous_bans']) || !isset($settings['player_previous_bans']) ? ' checked="checked"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>以前的禁言记录</td>
-					<td><input type="checkbox" name="prevmutes"'.((isset($settings['player_previous_mutes']) && $settings['player_previous_mutes']) || !isset($settings['player_previous_mutes']) ? ' checked="checked"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>警告记录</td>
-					<td><input type="checkbox" name="warnings"'.((isset($settings['player_warnings']) && $settings['player_warnings']) || !isset($settings['player_warnings']) ? ' checked="checked"' : '').' /></td>
-				</tr>
-				<tr>
-					<td>踢出记录</td>
-					<td><input type="checkbox" name="kicks"'.((isset($settings['player_kicks']) && $settings['player_kicks']) || !isset($settings['player_kicks']) ? ' checked="checked"' : '').' /></td>
-				</tr>';
+		echo $admin_page['two_is_writable_Homepage_Settings'];
 	} ?>
 	
 			</tbody>
@@ -331,9 +256,9 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 					<td colspan="2">
 	<?php
 	if(!is_writable('settings.php')) {
-		echo '<input type="submit" class="btn btn-primary btn-large disabled" disabled="disabled" value="保存" />';
+		echo $admin_page['settings_file_can_not_be_written_to'];
 	} else {
-		echo '<input type="submit" class="btn btn-primary btn-large" value="保存" />';
+		echo $admin_page['two_is_writable_save'];
 	} ?>
 			
 					</td>
@@ -343,8 +268,8 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 	</form>
 	<br />
 	<br />
-	<h3>其它事务</h3>
-	<a href="index.php?action=deletecache&authid=<?php echo sha1($settings['password']); ?>" class="btn btn-primary">清理缓存</a>
+	<h3><?php echo $language['other_matters']; ?></h3>
+	<a href="index.php?action=clearcache" class="btn btn-primary"><?php echo $language['Clear_Cache']; ?></a>
 	<br />
 	<br />
 	<br />
