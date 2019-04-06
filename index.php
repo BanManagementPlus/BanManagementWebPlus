@@ -10,6 +10,12 @@
 session_start();
 ob_start();
 
+if(empty($settings['language']) || ($settings['language'] == 'en')){
+	include('language\Default.php');
+} elseif($settings['language'] == 'zh-hans') {
+	include('language\zh-CN.php');
+}
+
 if(!isset($_SESSION['initiated'])) {
     session_regenerate_id();
     $_SESSION['initiated'] = true;
@@ -153,10 +159,10 @@ function redirect($location, $code = '302') {
 
 function errors($message) {
 	echo '
-		<div id="error" class="alert alert-error">
-			<button class="close" data-dismiss="alert">&times;</button>
-			<h4 class="alert-heading">错误</h4>
-			<ol>';
+	<div id="error" class="alert alert-error">
+		<button class="close" data-dismiss="alert">&times;</button>
+		<h4 class="alert-heading">错误</h4>
+		<ol>';
 	if(is_array($message)) {
 		foreach($message as $e)
 			echo '
