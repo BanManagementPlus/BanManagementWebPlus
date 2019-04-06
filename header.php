@@ -23,7 +23,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
 // about title
 if(empty($settings['website_title']))
-	$settings['website_title'] = 'Ban Management - 玩家封禁系统';
+	$settings['website_title'] = 'Ban Management | 玩家封禁系统';
 if(empty($settings['header_icon']))
 	$settings['header_icon'] ="img\header.ico"
 ?>
