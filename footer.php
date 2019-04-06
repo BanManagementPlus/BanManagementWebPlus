@@ -11,10 +11,10 @@
 			<hr>
 			<footer>
 			<?php
-			if($settings['footer'] == ''){
+			if(empty($settings['footer'])){
 				?><p class="pull-left"><?php echo $settings['footer']; ?></p><?php
 			} else {
-				if($settings['footer_url'] == ''){
+				if(empty($settings['footer_url'])){
 					?><p class="pull-left">Copyright (c) <?php echo $settings['footer']; ?></p><?php
 				} else {
 					?><p class="pull-left"><a href="<?php echo $settings['footer_url']; ?>" target="_blank">Copyright (c) <?php echo $settings['footer']; ?></a></p><?php
