@@ -26,6 +26,10 @@ $language['Visible_Options'] = 'Visible Options';
 $language['other_matters'] = 'other matters';
 $language['Clear_Cache'] = 'Clear Cache';
 $language['go_back'] = 'Go Back';
+$language['Website_statu'] =  'Website statu';
+$language['php_version'] = 'PHP Version';
+$language['project'] = 'project';
+$language['statu'] = 'statu';
 // header.php
 $language['BanManagement'] = 'Ban Management';
 // footer.php

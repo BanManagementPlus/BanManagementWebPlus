@@ -26,6 +26,10 @@ $language['Visible_Options'] = '可见选项';
 $language['other_matters'] = '其它事务';
 $language['Clear_Cache'] = '清除缓存';
 $language['go_back'] = '返回';
+$language['Website_statu'] = '网站状态';
+$language['php_version'] = 'PHP版本';
+$language['project'] = '项目';
+$language['statu'] = '状态';
 // header.php
 $language['BanManagement'] = '玩家封禁系统';
 // footer.php

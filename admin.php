@@ -7,7 +7,7 @@
 	may be available at http://creativecommons.org/licenses/by-nc-sa/2.0/uk/.
 	Additional licence terms at https://raw.github.com/confuser/Ban-Management/master/banmanagement/licence.txt
 */
-if($settings['password'] == '')
+if(empty($settings['password']))
 	errors('您没有输入管理员密码，请输入密码！');
 else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4) {
 	die('您没有设置密码或您的密码不正确，请稍后在尝试！');
@@ -273,19 +273,19 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 	<br />
 	<br />
 	<br />
-	<h3>网站状态</h3>
+	<h3><?php echo $language['Website_statu']; ?></h3>
 	<form class="form-horizontal settings" action="" method="post">
 		<table class="table table-striped table-bordered table-hover">
 			<thead>
 				<tr>
-					<th>项目</th>
-					<th>状态</th>
+					<th><?php echo $language['project']; ?></th>
+					<th><?php echo $language['statu']; ?></th>
 				</tr>
 			</thead>
 			<tbody>	
 				<tr>
-					<td>PHP版本</td>
-					<td><?php echo phpversion();?></td>
+					<td><?php echo $language['php_version']; ?></td>
+					<td><?php echo phpversion(); ?></td>
 				</tr>
 			</tbody>
 			<tfoot>
