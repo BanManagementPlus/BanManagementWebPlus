@@ -13,3 +13,6 @@
 ![login-2](https://s2.ax1x.com/2019/04/04/Agc6o9.jpg)
 ### about home page
 ![index-1](https://s2.ax1x.com/2019/04/04/AgcRRx.jpg)
+
+License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBanManagementPlus%2FBanManagementWebPlus.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FBanManagementPlus%2FBanManagementWebPlus?ref=badge_large)
