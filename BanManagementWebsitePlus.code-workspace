@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "afterDelay",
+		"git.enableCommitSigning": true,
+		"git.showPushSuccessNotification": true,
+		"terminal.integrated.copyOnSelection": true
+	}
+}
