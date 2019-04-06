@@ -16,7 +16,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 } else if(!isset($_SESSION['admin']) && !isset($_POST['password'])) {
 	?><form action="" method="post" class="well form-inline">
     <input type="password" class="input-xlarge" name="password" placeholder="请输入密码">
-    <button type="submit" class="btn">登录</button>
+    <button type="submit" class="btn"><?php echo $language['login']; ?></button>
     </form><?php
 } else if(isset($_POST['password']) && !isset($_SESSION['admin'])) {
 	if(htmlspecialchars_decode($_POST['password'], ENT_QUOTES) != $settings['password']) {
@@ -37,13 +37,17 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 	<table class="table table-striped table-bordered" id="servers">
 		<thead>
 			<tr>
-				<th>服务器名称</th>
-				<th>选项</th>
+				<th><?php echo $language['Server_Name']; ?></th>
+				<th><?php echo $language['Options']; ?></th>
 			</tr>
 		</thead>
 		<tbody><?php
 	if(empty($settings['servers']))
-		echo '<tr id="noservers"><td colspan="2">列表中没有服务器</td></tr>';
+		if(empty($settings['language']) || ($settings['language'] == 'en')){
+			echo '<tr id="noservers"><td colspan="2">No Servers Defined</td></tr>';
+		} elseif($settings['language'] == 'zh-hans') {
+			echo '<tr id="noservers"><td colspan="2">列表中没有服务器</td></tr>';
+		}
 	else {
 		$id = array_keys($settings['servers']);
 		$i = 0;
@@ -81,10 +85,20 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 			<tr>
 				<td colspan="2">
 		<?php
-	if(!is_writable('settings.php')) {
-		echo '<a class="btn btn-primary btn-large disabled" href="#addserver" title="Settings file not writable">Add Server</a>';
-	} else
-		echo '<a class="btn btn-primary btn-large" href="#addserver" data-toggle="modal">添加服务器</a>';
+	if(empty($settings['language']) || ($settings['language'] == 'en')){
+		if(!is_writable('settings.php')) {
+			echo '<a class="btn btn-primary btn-large disabled" href="#addserver" title="Settings file not writable">Add Server</a>';
+		} else{
+			echo '<a class="btn btn-primary btn-large" href="#addserver" data-toggle="modal">Add Server</a>';
+		}
+	} else if($settings['language'] == 'zh-hans'){
+		if(!is_writable('settings.php')) {
+			echo '<a class="btn btn-primary btn-large disabled" href="#addserver" title="Settings file not writable">添加服务器</a>';
+		} else{
+			echo '<a class="btn btn-primary btn-large" href="#addserver" data-toggle="modal">添加服务器</a>';
+		}
+	}
+
 	?>
 	
 				</td>
@@ -95,84 +109,84 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 		<form class="form-horizontal" action="" method="post">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h3>添加服务器</h3>
+				<h3><?php echo $language['Add_Server']; ?></h3>
 			</div>
 			<div class="modal-body">
 				<fieldset>
 					<div class="control-group">
-						<label class="control-label" for="servername">服务器名称:</label>
+						<label class="control-label" for="servername"><?php echo $language['Server_Name']; ?>:</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="servername" id="servername">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="host">数据库地址：</label>
+						<label class="control-label" for="host"><?php echo $language['MySQL_Host']; ?>：</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="host" id="host">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="database">数据库名：</label>
+						<label class="control-label" for="database"><?php echo $language['MySQL_Database']; ?>：</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="database" id="database">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="username">数据库用户名:</label>
+						<label class="control-label" for="username"><?php echo $language['MySQL_Username']; ?>:</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="username" id="usernme">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="password">数据库密码:</label>
+						<label class="control-label" for="password"><?php echo $language['MySQL_Password']; ?>:</label>
 						<div class="controls">
 							<input type="password" class="input-xlarge" name="password" id="password">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="banstable">封禁数据表名：</label>
+						<label class="control-label" for="banstable"><?php echo $language['Bans_Table']; ?>：</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="banstable" id="banstable" value="bm_bans">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="recordtable">封禁记录数据表名：</label>
+						<label class="control-label" for="recordtable"><?php echo $language['Bans_Record_Table']; ?>：</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="recordtable" id="recordtable" value="bm_ban_records">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="iptable">IP封禁数据表名：</label>
+						<label class="control-label" for="iptable"><?php echo $language['IP_Bans_Table']; ?>：</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="iptable" id="iptable" value="bm_ip_bans">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="iprecordtable">IP记录数据表名：</label>
+						<label class="control-label" for="iprecordtable"><?php echo $language['IP_Record_Table']; ?>：</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="iprecordtable" id="iprecordtable" value="bm_ip_records">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="mutestable">禁言数据表名:</label>
+						<label class="control-label" for="mutestable"><?php echo $language['Mutes_Table']; ?>:</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="mutestable" id="mutestable" value="bm_mutes">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="mutesrecordtable">禁言记录数据表名：</label>
+						<label class="control-label" for="mutesrecordtable"><?php echo $language['Mutes_Record_Table']; ?>：</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="mutesrecordtable" id="mutesrecordtable" value="bm_mutes_records">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="kickstable">踢出数据表名：</label>
+						<label class="control-label" for="kickstable"><?php echo $language['Kicks_Table']; ?>：</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="kickstable" id="kickstable" value="bm_kicks">
 						</div>
 					</div>
 					<div class="control-group">
-						<label class="control-label" for="warningstable">警告数据表名：</label>
+						<label class="control-label" for="warningstable"><?php echo $language['Warnings_Table']; ?>：</label>
 						<div class="controls">
 							<input type="text" class="input-xlarge required" name="warningstable" id="warningstable" value="bm_warnings">
 						</div>
@@ -180,23 +194,25 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 				</fieldset>
 			</div>
 			<div class="modal-footer">
-				<a href="#" class="btn" data-dismiss="modal">关闭</a>
-				<input type="submit" class="btn btn-primary" value="保存" />
+				<a href="#" class="btn" data-dismiss="modal"><?php echo $language['Close']; ?></a>
+				<input type="submit" class="btn btn-primary" value="<?php echo $language['Save']; ?>" />
 			</div>
 		</form>
 	</div>
 	<br />
 	<br />
-	<h3>首页设置</h3>
+	<h3><?php echo $language['Homepage_Settings']; ?> <small><?php echo $language['You_may_find_more_settings_in_settings_php']; ?></small></h3>
 	<form class="form-horizontal settings" action="" method="post">
 		<table class="table table-striped table-bordered table-hover">
 			<thead>
 				<tr>
-					<th>选项</th>
-					<th>设定</th>
+					<th><?php echo $language['Options']; ?></th>
+					<th><?php echo $language['Value']; ?></th>
 				</tr>
 			</thead>
 			<tbody>
+
+<?php // -------------------------------------------------------------------------   ?>
 	<?php
 	if(!is_writable('settings.php')) {
 		echo '

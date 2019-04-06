@@ -16,4 +16,8 @@ $language['Mutes_Record_Table'] = '禁言记录数据表名';
 $language['Kicks_Table'] = '踢出数据表名';
 $language['Warnings_Table'] = '警告数据表名';
 $language['Close'] = '关闭';
+$language['Save'] = '保存';
+$language['Homepage_Settings'] = '首页设置';
+$language['You_may_find_more_settings_in_settings_php'] = '您可以在settings.php中找到更多的设置';
+$language['Value'] = '设定';
 ?>
