@@ -1,5 +1,5 @@
 version: 1
 package_manager:
-  php: composer
+  - php: composer
 directory:
-  update_schedule: daily
+  - update_schedule: daily
