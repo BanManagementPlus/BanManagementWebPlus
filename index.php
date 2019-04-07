@@ -10,7 +10,7 @@
 session_start();
 ob_start();
 
-
+include('settings.php');
 if(empty($settings['Default_language']) || ($settings['Default_language'] == 'en')){
 	include('data\language\Basic_data\Default.php');
 	include('data\language\long_data\Default\admin_page.php');
@@ -615,7 +615,7 @@ $actions = array(
 	'viewip',
 	'viewplayer'
 );
-include('settings.php');
+
 // IE8 frame busting, well thats the only good thing it has :P (Now supported by Firefox woot)
 if((isset($settings['iframe_protection']) && $settings['iframe_protection']) || !isset($settings['iframe_protection']))
 	header('X-FRAME-OPTIONS: SAMEORIGIN');
