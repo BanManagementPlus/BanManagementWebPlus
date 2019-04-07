@@ -6,8 +6,11 @@
 	],
 	"settings": {
 		"files.autoSave": "afterDelay",
-		"git.enableCommitSigning": true,
 		"git.showPushSuccessNotification": true,
-		"terminal.integrated.copyOnSelection": true
+		"terminal.integrated.copyOnSelection": true,
+		"search.followSymlinks": false,
+		"git.enableCommitSigning": true,
+		"git.autorefresh": false,
+		"git.enabled": false
 	}
 }
