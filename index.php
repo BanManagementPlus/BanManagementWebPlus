@@ -10,7 +10,7 @@
 session_start();
 ob_start();
 
-include('settings.php');
+require('settings.php');
 if(empty($settings['Default_language']) || ($settings['Default_language'] == 'en')){
 	include('data\language\Basic_data\Default.php');
 	include('data\language\long_data\Default\admin_page.php');
