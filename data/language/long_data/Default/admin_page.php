@@ -45,7 +45,7 @@ $admin_page['two_is_writable_Homepage_Settings'] = '
 </tr>
 <tr>
     <td>Current Ban HTML Extra</td>
-    <td><input type="input" class="form-control" name="banextra"'.(isset($settings['player_current_ban_extra_html']) ? ' value="'.$settings['player_current_ban_extra_html'].'"' : '').' /></td>
+    <td><input type="input" name="banextra"'.(isset($settings['player_current_ban_extra_html']) ? ' value="'.$settings['player_current_ban_extra_html'].'"' : '').' /></td>
 </tr>
 <tr>
     <td>Current Mute</td>
@@ -53,7 +53,7 @@ $admin_page['two_is_writable_Homepage_Settings'] = '
 </tr>
 <tr>
     <td>Current Mute HTML Extra</td>
-    <td><input type="input" class="form-control" name="muteextra"'.(isset($settings['player_current_mute_extra_html']) ? ' value="'.$settings['player_current_mute_extra_html'].'"' : '').' /></td>
+    <td><input type="input" name="muteextra"'.(isset($settings['player_current_mute_extra_html']) ? ' value="'.$settings['player_current_mute_extra_html'].'"' : '').' /></td>
 </tr>
 <tr>
     <td>Previous Bans</td>

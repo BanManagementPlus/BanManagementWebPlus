@@ -269,7 +269,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 	<br />
 	<br />
 	<h3><?php echo $language['other_matters']; ?></h3>
-	<a href="index.php?action=clearcache" class="btn btn-primary"><?php echo $language['Clear_Cache']; ?></a>
+	<a href="clearcache.php" class="btn btn-primary"><?php echo $language['Clear_Cache']; ?></a>
 	<br />
 	<br />
 	<br />
