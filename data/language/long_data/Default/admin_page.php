@@ -1,11 +1,11 @@
 <?php
-$admin_page['one_is_writable_save'] = '<input type="submit" class="btn btn-primary btn-large disabled" disabled="disabled" value="Save" />';
-$admin_page['two_is_writable_save'] = '<input type="submit" class="btn btn-primary btn-large" value="Save" />';
-$admin_page['settings_file_can_not_be_written_to'] = '
+$language_admin_page['one_is_writable_save'] = '<input type="submit" class="btn btn-primary btn-large disabled" disabled="disabled" value="Save" />';
+$language_admin_page['two_is_writable_save'] = '<input type="submit" class="btn btn-primary btn-large" value="Save" />';
+$language_admin_page['settings_file_can_not_be_written_to'] = '
 <tr>
     <td colspan="2">settings.php can not be written to</td>
 </tr>';
-$admin_page['one_is_writable_Homepage_Settings'] = '
+$language_admin_page['one_is_writable_Homepage_Settings'] = '
 <tr>
     <td>iFrame Protection (Recommended)</td>
     <td><input type="hidden" name="type" value="mainsettings" /><input type="checkbox" name="iframe"'.((isset($settings['iframe_protection']) && $settings['iframe_protection']) || !isset($settings['iframe_protection']) ? ' checked="checked"' : '').' /></td>
@@ -38,7 +38,7 @@ $admin_page['one_is_writable_Homepage_Settings'] = '
     <td>HTML After Buttons</td>
     <td><input type="text" name="buttons_after" value="'.(isset($settings['submit_buttons_after_html']) ? $settings['submit_buttons_after_html'] : '').'" /></td>
 </tr>';
-$admin_page['two_is_writable_Homepage_Settings'] = '
+$language_admin_page['two_is_writable_Homepage_Settings'] = '
 <tr>
     <td>Current Ban</td>
     <td><input type="hidden" name="type" value="viewplayer" /><input type="checkbox" name="ban"'.((isset($settings['player_current_ban']) && $settings['player_current_ban']) || !isset($settings['player_current_ban']) ? ' checked="checked"' : '').' /></td>
@@ -71,5 +71,5 @@ $admin_page['two_is_writable_Homepage_Settings'] = '
     <td>Kicks</td>
     <td><input type="checkbox" name="kicks"'.((isset($settings['player_kicks']) && $settings['player_kicks']) || !isset($settings['player_kicks']) ? ' checked="checked"' : '').' /></td>
 </tr>';
-$admin_page['No_Servers_Defined'] = '<tr id="noservers"><td colspan="2">No Servers Defined</td></tr>';
+$language_admin_page['No_Servers_Defined'] = '<tr id="noservers"><td colspan="2">No Servers Defined</td></tr>';
 ?>

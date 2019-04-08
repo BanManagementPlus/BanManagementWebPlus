@@ -30,6 +30,9 @@ $language['Website_statu'] = '网站状态';
 $language['php_version'] = 'PHP版本';
 $language['project'] = '项目';
 $language['statu'] = '状态';
+$language['Button'] = '按钮';
+$language['start'] = '开始';
+$language['Please_enter_your_password'] = '请输入您的密码';
 // header.php
 $language['BanManagement'] = '玩家封禁系统';
 // footer.php
@@ -41,4 +44,7 @@ $language['Latest_Mutes'] = '最新禁言';
 $language['Latest_warnings'] = '最新警告';
 $language['Display_All'] = '查看所有';
 $language['Search'] = '搜索';
+$language['Player'] = '玩家';
+$language['Search_by_username'] = '请输入玩家游戏名';
+$language['Search_for_a_Ban'] = '封禁查询';
 ?>

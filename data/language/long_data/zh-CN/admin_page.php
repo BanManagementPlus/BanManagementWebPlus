@@ -1,11 +1,11 @@
 <?php
-$admin_page['one_is_writable_save'] = '<input type="submit" class="btn btn-primary btn-large disabled" disabled="disabled" value="保存" />';
-$admin_page['two_is_writable_save'] = '<input type="submit" class="btn btn-primary btn-large" value="保存" />';
-$admin_page['settings_file_can_not_be_written_to'] = '
+$language_admin_page['one_is_writable_save'] = '<input type="submit" class="btn btn-primary btn-large disabled" disabled="disabled" value="保存" />';
+$language_admin_page['two_is_writable_save'] = '<input type="submit" class="btn btn-primary btn-large" value="保存" />';
+$language_admin_page['settings_file_can_not_be_written_to'] = '
 <tr>
     <td colspan="2">settings.php无法写入</td>
 </tr>';
-$admin_page['one_is_writable_Homepage_Settings'] = '
+$language_admin_page['one_is_writable_Homepage_Settings'] = '
 <tr>
     <td>iFrame 保护（推荐开启）</td>
     <td><input type="hidden" name="type" value="mainsettings" /><input type="checkbox" name="iframe"'.((isset($settings['iframe_protection']) && $settings['iframe_protection']) || !isset($settings['iframe_protection']) ? ' checked="checked"' : '').' /></td>
@@ -38,7 +38,7 @@ $admin_page['one_is_writable_Homepage_Settings'] = '
     <td>网页按钮后缀</td>
     <td><input type="text" name="buttons_after" value="'.(isset($settings['submit_buttons_after_html']) ? $settings['submit_buttons_after_html'] : '').'" /></td>
 </tr>';
-$admin_page['two_is_writable_Homepage_Settings'] = '
+$language_admin_page['two_is_writable_Homepage_Settings'] = '
 <tr>
     <td>最新封禁记录</td>
     <td><input type="hidden" name="type" value="viewplayer" /><input type="checkbox" name="ban"'.((isset($settings['player_current_ban']) && $settings['player_current_ban']) || !isset($settings['player_current_ban']) ? ' checked="checked"' : '').' /></td>
@@ -71,5 +71,6 @@ $admin_page['two_is_writable_Homepage_Settings'] = '
     <td>踢出记录</td>
     <td><input type="checkbox" name="kicks"'.((isset($settings['player_kicks']) && $settings['player_kicks']) || !isset($settings['player_kicks']) ? ' checked="checked"' : '').' /></td>
 </tr>';
-$admin_page['No_Servers_Defined'] = '<tr id="noservers"><td colspan="2">列表中没有服务器</td></tr>';
+$language_admin_page['No_Servers_Defined'] = '<tr id="noservers"><td colspan="2">列表中没有服务器</td></tr>';
+$language_admin_page['add_server'] = '<a class="btn btn-primary btn-large" href="#addserver" data-toggle="modal">添加服务器</a>';
 ?>

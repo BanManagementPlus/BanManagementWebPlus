@@ -30,6 +30,9 @@ $language['Website_statu'] =  'Website statu';
 $language['php_version'] = 'PHP Version';
 $language['project'] = 'project';
 $language['statu'] = 'statu';
+$language['Button'] = 'Button';
+$language['start'] = 'start';
+$language['Please_enter_your_password'] = 'Please enter your password';
 // header.php
 $language['BanManagement'] = 'Ban Management';
 // footer.php
@@ -42,8 +45,9 @@ $language['Latest_warnings'] = 'Latest warnings';
 $language['Display_All'] = 'Display All';
 $language['Search'] = 'Search';
 //$language['searchplayer'] = 'Search Player';
-//$language[''] = '';
-//$language[''] = '';
+$language['Player'] = 'Player';
+$language['Search_by_username'] = 'Search by username';
+$language['Search_for_a_Ban'] = 'Search for a Ban';
 //$language[''] = '';
 //$language[''] = '';
 //$language[''] = '';
