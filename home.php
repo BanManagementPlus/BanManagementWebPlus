@@ -101,7 +101,7 @@ function latestWarnings($server, $serverID) {
 }
 ?>
 <div class="hero-unit">
-	<h1>封禁查询</h1>
+	<h1><?php echo $language['Search_for_a_Ban']; ?></h1>
 	<br />
 	<form action="index.php" method="get" class="form-horizontal" id="search">
 		<fieldset>
@@ -120,14 +120,14 @@ function latestWarnings($server, $serverID) {
 					<div class="input-prepend">
 						<div class="btn-group">
 							<button id="player" class="btn dropdown-toggle" data-toggle="dropdown" type="button">
-								玩家
+								<?php echo $language['Player']; ?>
 								<span class="caret"></span>
 							</button>
 							<ul class="dropdown-menu">
 								<li id="ip"><a href="#">IP</a></li>
 							</ul>
 						</div>
-						<input type="text" name="player" class="span4 required" placeholder="请输入玩家游戏名">
+						<input type="text" name="player" class="span4 required" placeholder="<?php echo $language['Search_by_username']; ?>">
 					</div>
 
 			</div>
@@ -159,7 +159,7 @@ function latestWarnings($server, $serverID) {
 					echo htmlspecialchars_decode($settings['submit_buttons_before_html'], ENT_QUOTES);
 				?>
 				<input type="submit" class="btn btn-primary" value="<?php echo $language['Search']; ?>" />
-				<input type="hidden" name="action" value="searchplayer" />
+				<input type="hidden" name="action" value="<?php echo $language['Search']; ?>searchplayer" />
 				<a href="#" class="btn" id="viewall"><?php echo $language['Display_All']; ?></a>
 				<?php
 				if(isset($settings['submit_buttons_after_html']))

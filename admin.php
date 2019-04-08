@@ -15,7 +15,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 		unset($_SESSION['failed_attempts']);
 } else if(!isset($_SESSION['admin']) && !isset($_POST['password'])) {
 	?><form action="" method="post" class="well form-inline">
-    <input type="password" class="input-xlarge" name="password" placeholder="请输入密码">
+    <input type="password" class="input-xlarge" name="password" placeholder="<?php echo $language['Please_enter_your_password']; ?>">
     <button type="submit" class="btn"><?php echo $language['Sign_In']; ?></button>
     </form><?php
 } else if(isset($_POST['password']) && !isset($_SESSION['admin'])) {
@@ -43,7 +43,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 		</thead>
 		<tbody><?php
 	if(empty($settings['servers']))
-		echo $admin_page['No_Servers_Defined'];
+		echo $language_admin_page['No_Servers_Defined'];
 	else {
 		$id = array_keys($settings['servers']);
 		$i = 0;
@@ -75,7 +75,6 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 		}
 	}
 		?>
-		
 		</tbody>
 		<tfoot>
 			<tr>
@@ -210,9 +209,9 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 
 	<?php
 	if(!is_writable('settings.php')) {
-		echo $admin_page['one_is_writable_Homepage_Settings'];
+		echo $language_admin_page['one_is_writable_Homepage_Settings'];
 	} else {
-		echo $admin_page['one_is_writable_Homepage_Settings'];
+		echo $language_admin_page['one_is_writable_Homepage_Settings'];
 	} ?>
 	
 			</tbody>
@@ -221,9 +220,9 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 					<td colspan="2">
 	<?php
 	if(!is_writable('settings.php')) {
-		echo $admin_page['one_is_writable_save'];
+		echo $language_admin_page['one_is_writable_save'];
 	} else {
-		echo $admin_page['two_is_writable_save'];
+		echo $language_admin_page['two_is_writable_save'];
 	} ?>
 			
 					</td>
@@ -245,9 +244,9 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 			<tbody>
 	<?php
 	if(!is_writable('settings.php')) {
-		echo $admin_page['settings_file_can_not_be_written_to'];
+		echo $language_admin_page['settings_file_can_not_be_written_to'];
 	} else {
-		echo $admin_page['two_is_writable_Homepage_Settings'];
+		echo $language_admin_page['two_is_writable_Homepage_Settings'];
 	} ?>
 	
 			</tbody>
@@ -256,9 +255,9 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 					<td colspan="2">
 	<?php
 	if(!is_writable('settings.php')) {
-		echo $admin_page['settings_file_can_not_be_written_to'];
+		echo $language_admin_page['settings_file_can_not_be_written_to'];
 	} else {
-		echo $admin_page['two_is_writable_save'];
+		echo $language_admin_page['two_is_writable_save'];
 	} ?>
 			
 					</td>
@@ -269,7 +268,22 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 	<br />
 	<br />
 	<h3><?php echo $language['other_matters']; ?></h3>
-	<a href="clearcache.php" class="btn btn-primary"><?php echo $language['Clear_Cache']; ?></a>
+	<form class="form-horizontal settings" action="" method="post">
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr>
+					<th><?php echo $language['project']; ?></th>
+					<th><?php echo $language['Button']; ?></th>
+				</tr>
+			</thead>
+			<tbody>	
+				<tr>
+					<td><?php echo $language['Clear_Cache']; ?></td>
+					<td><a href="clearcache.php" class="btn btn-primary"><?php echo $language['start']; ?></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</form>
 	<br />
 	<br />
 	<br />
