@@ -72,4 +72,6 @@ $language_admin_page['two_is_writable_Homepage_Settings'] = '
     <td><input type="checkbox" name="kicks"'.((isset($settings['player_kicks']) && $settings['player_kicks']) || !isset($settings['player_kicks']) ? ' checked="checked"' : '').' /></td>
 </tr>';
 $language_admin_page['No_Servers_Defined'] = '<tr id="noservers"><td colspan="2">No Servers Defined</td></tr>';
+$language_admin_page['add_server_one'] = '<a class="btn btn-primary btn-large disabled" href="#addserver" title="Settings file not writable">Add Server</a>';
+$language_admin_page['add_server_two'] = '<a class="btn btn-primary btn-large" href="#addserver" data-toggle="modal">Add Server</a>';
 ?>

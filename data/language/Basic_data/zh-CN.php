@@ -47,4 +47,6 @@ $language['Search'] = '搜索';
 $language['Player'] = '玩家';
 $language['Search_by_username'] = '请输入玩家游戏名';
 $language['Search_for_a_Ban'] = '封禁查询';
+// server.php
+$language['No_servers_found!'] = '没有找到任何服务器！';
 ?>

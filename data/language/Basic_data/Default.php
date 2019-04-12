@@ -48,7 +48,8 @@ $language['Search'] = 'Search';
 $language['Player'] = 'Player';
 $language['Search_by_username'] = 'Search by username';
 $language['Search_for_a_Ban'] = 'Search for a Ban';
-//$language[''] = '';
+// server.php
+$language['No_servers_found!'] = 'No servers found!';
 //$language[''] = '';
 //$language[''] = '';
 //$language[''] = '';
