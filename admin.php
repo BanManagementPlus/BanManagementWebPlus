@@ -80,19 +80,11 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 			<tr>
 				<td colspan="2">
 		<?php
-	if(empty($settings['Default_language']) || ($settings['Default_language'] == 'en')){
 		if(!is_writable('settings.php')) {
-			echo '<a class="btn btn-primary btn-large disabled" href="#addserver" title="Settings file not writable">Add Server</a>';
+			echo $language_admin_page['add_server_one'];
 		} else{
-			echo '<a class="btn btn-primary btn-large" href="#addserver" data-toggle="modal">Add Server</a>';
+			echo $language_admin_page['add_server_two'];
 		}
-	} else if($settings['Default_language'] == 'zh-hans'){
-		if(!is_writable('settings.php')) {
-			echo '<a class="btn btn-primary btn-large disabled" href="#addserver" title="Settings file not writable">添加服务器</a>';
-		} else{
-			echo '<a class="btn btn-primary btn-large" href="#addserver" data-toggle="modal">添加服务器</a>';
-		}
-	}
 
 	?>
 	

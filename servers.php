@@ -8,7 +8,7 @@
 	Additional licence terms at https://raw.github.com/confuser/Ban-Management/master/banmanagement/licence.txt
 */
 if(empty($settings['servers']))
-	echo '没有找到任何服务器！';
+	echo $language['No_servers_found!'];
 else {
 	?>
 	<table class="table table-striped table-bordered">
