@@ -11,14 +11,7 @@ session_start();
 ob_start();
 
 require('settings.php');
-if(empty($settings['Default_language']) || ($settings['Default_language'] == 'en')){
-	include('data\language\Basic_data\Default.php');
-	include('data\language\long_data\Default\admin_page.php');
-} elseif($settings['Default_language'] == 'zh' || $settings['Default_language'] == 'zh-cn' || $settings['Default_language'] == 'zh-Hans' || $settings['Default_language'] == 'zh-hans' || $settings['Default_language'] == 'zh-CN') {
-	include('data\language\Basic_data\zh-CN.php');
-	include('data\language\long_data\zh-CN\admin_page.php');
-	$footer_Xiao_Fang_He = 'true';
-}
+require('data\language\language.php');
 
 if(!isset($_SESSION['initiated'])) {
     session_regenerate_id();
