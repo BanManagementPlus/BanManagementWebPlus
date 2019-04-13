@@ -20,7 +20,7 @@ function latestBans($server, $serverID) {
 	$rows = count($result);
 
 	if($rows == 0)
-		echo '<li>没有记录</li>';
+		echo $language_home_page['No_record_li'];
 	else {
 		$timeDiff = cache('SELECT ('.time().' - UNIX_TIMESTAMP(now()))/3600 AS mysqlTime', 5, $serverID.'/mysqlTime', $server); // Cache it for a few seconds
 
@@ -54,7 +54,7 @@ function latestMutes($server, $serverID) {
 	$rows = count($result);
 
 	if($rows == 0)
-		echo '<li>没有记录</li>';
+		echo $language_home_page['No_record_li'];
 	else {
 		$timeDiff = cache('SELECT ('.time().' - UNIX_TIMESTAMP(now()))/3600 AS mysqlTime', 5, $serverID.'/mysqlTime', $server); // Cache it for a few seconds
 
@@ -87,7 +87,7 @@ function latestWarnings($server, $serverID) {
 	$rows = count($result);
 
 	if($rows == 0)
-		echo '<li>没有记录</li>';
+		echo $language_home_page['No_record_li'];
 	else {
 		$timeDiff = cache('SELECT ('.time().' - UNIX_TIMESTAMP(now()))/3600 AS mysqlTime', 5, $serverID.'/mysqlTime', $server); // Cache it for a few seconds
 
@@ -195,7 +195,7 @@ if(count($settings['servers']) > 1) {
 			echo '
 	</div>';
 		} else
-			echo '<p>没有记录</p>';
+			echo $language_home_page['No_record_p'];
 }
 
 	if((isset($settings['latest_mutes']) && $settings['latest_mutes'])) {
@@ -223,7 +223,7 @@ if(count($settings['servers']) > 1) {
 			echo '
 	</div>';
 		} else
-			echo '<p>没有记录</p>';
+			echo $language_home_page['No_record_p'];
 }
 
 	if((isset($settings['latest_warnings']) && $settings['latest_warnings'])) {
@@ -251,7 +251,7 @@ if(count($settings['servers']) > 1) {
 			echo '
 	</div>';
 		} else
-			echo '<p>没有记录</p>';
+			echo $language_home_page['No_record_p'];
 	}
 } else if(count($settings['servers']) == 1) {
 	$display = false;

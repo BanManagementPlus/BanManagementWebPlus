@@ -32,6 +32,8 @@ $language['project'] = 'project';
 $language['statu'] = 'statu';
 $language['Button'] = 'Button';
 $language['start'] = 'start';
+$language['empty_settings_password'] = 'You have not set a password. For your security, it\'s required that you set one.';
+$language['You_have_reached_the_maximum_number_of_attempts'] = 'You have reached the maximum number of attempts, Please try again in 30 minutes.';
 $language['Please_enter_your_password'] = 'Please enter your password';
 // header.php
 $language['BanManagement'] = 'Ban Management';
@@ -44,6 +46,7 @@ $language['Latest_Mutes'] = 'Latest Mutes';
 $language['Latest_warnings'] = 'Latest warnings';
 $language['Display_All'] = 'Display All';
 $language['Search'] = 'Search';
+
 //$language['searchplayer'] = 'Search Player';
 $language['Player'] = 'Player';
 $language['Search_by_username'] = 'Search by username';

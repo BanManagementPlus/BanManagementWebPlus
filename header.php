@@ -7,18 +7,31 @@
 	may be available at http://creativecommons.org/licenses/by-nc-sa/2.0/uk/.
 	Additional licence terms at https://raw.github.com/confuser/Ban-Management/master/banmanagement/licence.txt
 */
-$nav = array(
-	'首页' => 'index.php',
-	'服务器列表' => 'index.php?action=servers',
-	'个人设置' =>  'index.php?action=PersonalSettings',
-);
-if(isset($_SESSION['admin']) && $_SESSION['admin']) {
-	$nav['管理中心'] = 'index.php?action=admin';
-	$nav['登出'] = 'index.php?action=logout';
-} else {
-  $nav['登录后台']='index.php?action=admin';
+if(empty($settings['Default_language']) || ($settings['Default_language'] == 'en')){
+	$nav = array(
+		'home' => 'index.php',
+		'servers' => 'index.php?action=servers',
+//		'个人设置' =>  'index.php?action=PersonalSettings',
+	);
+	if(isset($_SESSION['admin']) && $_SESSION['admin']) {
+		$nav['admin'] = 'index.php?action=admin';
+		$nav['logout'] = 'index.php?action=logout';
+	} else {
+  	$nav['sign in']='index.php?action=admin';
+	}
+} elseif($settings['Default_language'] == 'zh' || $settings['Default_language'] == 'zh-cn' || $settings['Default_language'] == 'zh-Hans' || $settings['Default_language'] == 'zh-hans' || $settings['Default_language'] == 'zh-CN') {
+	$nav = array(
+		'首页' => 'index.php',
+		'服务器列表' => 'index.php?action=servers',
+//		'个人设置' =>  'index.php?action=PersonalSettings',
+	);
+	if(isset($_SESSION['admin']) && $_SESSION['admin']) {
+		$nav['管理中心'] = 'index.php?action=admin';
+		$nav['登出'] = 'index.php?action=logout';
+	} else {
+  	$nav['登录后台']='index.php?action=admin';
+	}
 }
-
 
 $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
 // about title

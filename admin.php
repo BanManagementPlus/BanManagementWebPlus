@@ -8,9 +8,9 @@
 	Additional licence terms at https://raw.github.com/confuser/Ban-Management/master/banmanagement/licence.txt
 */
 if(empty($settings['password']))
-	errors('您没有输入管理员密码，请输入密码！');
+	errors($language['empty_settings_password']);
 else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4) {
-	die('您没有设置密码或您的密码不正确，请稍后在尝试！');
+	die($language['You_have_reached_the_maximum_number_of_attempts']);
 	if($_SESSION['failed_attempt'] < time())
 		unset($_SESSION['failed_attempts']);
 } else if(!isset($_SESSION['admin']) && !isset($_POST['password'])) {
@@ -271,7 +271,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 			<tbody>	
 				<tr>
 					<td><?php echo $language['Clear_Cache']; ?></td>
-					<td><a href="clearcache.php" class="btn btn-primary"><?php echo $language['start']; ?></a></td>
+					<td><a href="index.php?action=plugin/clearcache" class="btn btn-primary"><?php echo $language['start']; ?></a></td>
 				</tr>
 			</tbody>
 		</table>
@@ -293,6 +293,9 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 					<td><?php echo $language['php_version']; ?></td>
 					<td><?php echo phpversion(); ?></td>
 				</tr>
+				<tr>
+					<td><?php echo $language['website_version']; ?></td>
+					<td><?php echo $language['website_version_long']; ?></td>
 			</tbody>
 			<tfoot>
 				<tr>
