@@ -586,6 +586,7 @@ function searchIps($search, $serverID, $server, $sortByCol = 'name', $sortBy = '
 $actions = array(
 	'addserver',
 	'admin',
+	'plugin/clearcache',
 	'deleteban',
 	'deletebanrecord',
 	'deletecache',
