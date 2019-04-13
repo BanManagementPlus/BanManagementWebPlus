@@ -25,7 +25,7 @@
 				<p class="pull-right">
 					<?php echo $language['Created']; ?> By <a href="https://github.com/BanManagement" target="_blank">BanManagement</a>
 					<br />
-					<?php echo $language['Plus_version_created_by']; ?> By <a href="https://weibo.com/u/6833082752?refer_flag=1005055010_" target="_blank">Mr.yan
+					<?php echo $language['Plus_version_created_by']; ?> By <a href="https://weibo.com/u/6833082752?refer_flag=1005055010_" target="_blank">Mr.yan</a>
 					<?php 
 					if($footer_Xiao_Fang_He == 'true'){
 						?><br />
