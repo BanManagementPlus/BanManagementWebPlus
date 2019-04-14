@@ -1,5 +1,5 @@
 <?php
-ob_flush();
 flush();
+ob_clean();
 Header("Location:index.php?action=admin"); 
 ?>
