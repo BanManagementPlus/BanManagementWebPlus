@@ -48,7 +48,6 @@ $language['Latest_Mutes'] = 'Latest Mutes';
 $language['Latest_warnings'] = 'Latest warnings';
 $language['Display_All'] = 'Display All';
 $language['Search'] = 'Search';
-
 //$language['searchplayer'] = 'Search Player';
 $language['Player'] = 'Player';
 $language['Search_by_username'] = 'Search by username';
