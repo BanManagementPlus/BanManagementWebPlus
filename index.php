@@ -11,7 +11,7 @@ session_start();
 ob_start();
 
 require('settings.php');
-require('data\language\language.php');
+require('data/language/language.php');
 
 if(!isset($_SESSION['initiated'])) {
     session_regenerate_id();
@@ -586,6 +586,7 @@ function searchIps($search, $serverID, $server, $sortByCol = 'name', $sortBy = '
 $actions = array(
 	'addserver',
 	'admin',
+	'plugin/refreshbuffer',
 	'plugin/clearcache',
 	'deleteban',
 	'deletebanrecord',
