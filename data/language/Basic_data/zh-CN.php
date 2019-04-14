@@ -35,6 +35,8 @@ $language['start'] = '开始';
 $language['empty_settings_password'] = '您没有输入管理员密码，为了你的网站安全，请到settings.php输入密码！';
 $language['You_have_reached_the_maximum_number_of_attempts'] = '您已达到最大尝试次数，请在30分钟后重试。';
 $language['Please_enter_your_password'] = '请输入您的密码';
+$language['website_version'] = '网站版本';
+$language['Refresh_Buffer'] = '刷新缓存';
 // header.php
 $language['BanManagement'] = '玩家封禁系统';
 // footer.php

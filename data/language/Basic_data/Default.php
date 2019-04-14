@@ -35,6 +35,8 @@ $language['start'] = 'start';
 $language['empty_settings_password'] = 'You have not set a password. For your security, it\'s required that you set one.';
 $language['You_have_reached_the_maximum_number_of_attempts'] = 'You have reached the maximum number of attempts, Please try again in 30 minutes.';
 $language['Please_enter_your_password'] = 'Please enter your password';
+$language['website_version'] = 'website version';
+$language['Refresh_Buffer'] = 'Refresh Buffer';
 // header.php
 $language['BanManagement'] = 'Ban Management';
 // footer.php
