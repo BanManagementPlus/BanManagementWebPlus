@@ -38,7 +38,7 @@ $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME
 if(empty($settings['website_title']))
 	$settings['website_title'] = 'Ban Management | 玩家封禁系统';
 if(empty($settings['header_icon']))
-	$settings['header_icon'] ="img\header.ico"
+	$settings['header_icon'] ="img/header.ico"
 ?>
 <!DOCTYPE html>
 <html lang="<?php echo $settings['Default_language']; ?>">
