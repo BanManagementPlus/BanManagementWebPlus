@@ -21,4 +21,14 @@
 		"body": "// $1",
 		"description": "annotation: //",
 	},
+	"br":{
+		"scope": "html",
+		"prefix": "br",
+		"body": "<br />",
+	},
+	"h3":{
+		"scope": "html",
+		"prefix": "<h3>",
+		"body": "<h3>$1</h3>"
+	}
 }
