@@ -270,12 +270,14 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
 			</thead>
 			<tbody>	
 				<tr>
+					<td><?php echo $language['Refresh_Buffer']; ?></td>
+					<td><a href="index.php?action=plugin/refreshbuffer" class="btn btn-primary"><?php echo $language['start']; ?></a></td>
+				</tr>
+				<tr>
 					<td><?php echo $language['Clear_Cache']; ?></td>
 					<td><a href="index.php?action=plugin/clearcache" class="btn btn-primary"><?php echo $language['start']; ?></a></td>
-				</tr>
 			</tbody>
 		</table>
-	</form>
 	<br />
 	<br />
 	<br />
