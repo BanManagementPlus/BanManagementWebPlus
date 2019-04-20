@@ -1,5 +1,6 @@
 # BanManagement  
 ## status  
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/721b1b01fc864bc58634b5a4da469120)](https://app.codacy.com/app/BanManagementPlus/BanManagementWebPlus?utm_source=github.com&utm_medium=referral&utm_content=BanManagementPlus/BanManagementWebPlus&utm_campaign=Badge_Grade_Settings)
 ![GitHub License](https://img.shields.io/github/license/Ban-Management/BanManagement.svg?style=popout-square) [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2FBanManagementPlus%2FBanManagementWebPlus.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2FBanManagementPlus%2FBanManagementWebPlus?ref=badge_shield)
  ![Current Version](https://img.shields.io/github/release/BanManagementPlus/BanManagementWebPlus.svg?style=popout-square)  ![](https://img.shields.io/badge/PHP-%3E%3D5.4-blue.svg)   ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/BanManagementPlus/BanManagementWebPlus.svg?style=popout-square)   ![GitHub last commit](https://img.shields.io/github/last-commit/BanManagementPlus/BanManagementWebPlus.svg?style=popout-square) ![GitHub repo size](https://img.shields.io/github/repo-size/BanManagementPlus/BanManagementWebPlus.svg?style=popout-square)
 
