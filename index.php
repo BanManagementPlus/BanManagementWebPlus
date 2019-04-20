@@ -11,7 +11,7 @@ session_start();
 ob_start();
 
 require('settings.php');
-require('data/language/language.php');
+require('system/all.php');
 
 if(!isset($_SESSION['initiated'])) {
     session_regenerate_id();
