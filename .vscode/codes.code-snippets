@@ -30,5 +30,20 @@
 		"scope": "html",
 		"prefix": "<h3>",
 		"body": "<h3>$1</h3>"
-	}
+	},
+	"php_begin":{
+		"prefix": "php",
+		"body": [
+			"php",
+			"$0",
+			"?>"
+		],
+		"description": "php begin"
+	},
+	"include":{
+		"scope": "php",
+		"prefix": "include",
+		"body": "include('$1');",
+		"description": "include",
+	},
 }
