@@ -51,23 +51,23 @@ if(empty($settings['header_icon']))
 		<meta name="author" content="">
 
 		<!-- Le styles -->
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+		<link href="https://banmanagementplus.github.io/outside/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://banmanagementplus.github.io/outside/css/bootstrap-responsive.min.css" rel="stylesheet">
 
-		<link href="css/style.css" rel="stylesheet">
+		<link href="https://banmanagementplus.github.io/outside/css/style.css" rel="stylesheet">
 		
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
 		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.validate.min.js"></script>
-		<script src="js/heartcode-canvasloader-min.js"></script>
-		<script src="js/jquery.countdown.min.js"></script>
-		<script src="js/jquery.tablesorter.min.js"></script>
-		<script src="js/jquery.tablesorter.widgets.min.js"></script>
-		<script src="js/jquery.tablesorter.pager.min.js"></script>
+		<script src="https://banmanagementplus.github.io/outside/js/jquery.min.js"></script>
+		<script src="https://banmanagementplus.github.io/outside/js/bootstrap.min.js"></script>
+		<script src="https://banmanagementplus.github.io/outside/js/jquery.validate.min.js"></script>
+		<script src="https://banmanagementplus.github.io/outside/js/heartcode-canvasloader-min.js"></script>
+		<script src="https://banmanagementplus.github.io/outside/js/jquery.countdown.min.js"></script>
+		<script src="https://banmanagementplus.github.io/outside/js/jquery.tablesorter.min.js"></script>
+		<script src="https://banmanagementplus.github.io/outside/js/jquery.tablesorter.widgets.min.js"></script>
+		<script src="https://banmanagementplus.github.io/outside/js/jquery.tablesorter.pager.min.js"></script>
 <?php
 if((isset($settings['iframe_protection']) && $settings['iframe_protection']) || !isset($settings['iframe_protection'])) {
 	echo '
@@ -82,13 +82,13 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 		</script>';
 	if(isset($_GET['action']) && $_GET['action'] != 'admin')
 		echo '
-		<script src="//'.$path.'js/bootstrap-datetimepicker.min.js"></script>
-		<script src="//'.$path.'js/admin.js"></script>
+		<script src="//'.$path.'https://banmanagementplus.github.io/outside/js/bootstrap-datetimepicker.min.js"></script>
+		<script src="//'.$path.'https://banmanagementplus.github.io/outside/js/admin.js"></script>
 ';
 }
 		?>
 		
-		<script src="js/core.js"></script>
+		<script src="https://banmanagementplus.github.io/outside/js/core.js"></script>
 	</head>
 <?php
 if(empty($settings['background'])){
