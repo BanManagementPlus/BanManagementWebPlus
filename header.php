@@ -83,7 +83,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 	if(isset($_GET['action']) && $_GET['action'] != 'admin')
 		echo '
 		<script src="//'.$path.'https://banmanagementplus.github.io/outside/js/bootstrap-datetimepicker.min.js"></script>
-		<script src="//'.$path.'https://banmanagementplus.github.io/outside/js/admin.js"></script>
+		<script src="//'.$path.'js/admin.js"></script>
 ';
 }
 		?>

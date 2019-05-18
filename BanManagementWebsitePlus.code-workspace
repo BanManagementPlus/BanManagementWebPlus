@@ -11,6 +11,6 @@
 		"search.followSymlinks": false,
 		"git.enableCommitSigning": true,
 		"git.autorefresh": false,
-		"git.enabled": false
+		"git.enabled": true
 	}
 }
