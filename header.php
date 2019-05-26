@@ -14,10 +14,10 @@ if(empty($settings['Default_language']) || ($settings['Default_language'] == 'en
 //		'个人设置' =>  'index.php?action=PersonalSettings',
 	);
 	if(isset($_SESSION['admin']) && $_SESSION['admin']) {
-		$nav['admin'] = 'index.php?action=admin';
+		$nav['admin'] = 'index.php?action=Manage_website';
 		$nav['logout'] = 'index.php?action=logout';
 	} else {
-  	$nav['sign in']='index.php?action=admin';
+  	$nav['sign in']='index.php?action=login';
 	}
 } elseif($settings['Default_language'] == 'zh' || $settings['Default_language'] == 'zh-cn' || $settings['Default_language'] == 'zh-Hans' || $settings['Default_language'] == 'zh-hans' || $settings['Default_language'] == 'zh-CN') {
 	$nav = array(
@@ -26,10 +26,10 @@ if(empty($settings['Default_language']) || ($settings['Default_language'] == 'en
 //		'个人设置' =>  'index.php?action=PersonalSettings',
 	);
 	if(isset($_SESSION['admin']) && $_SESSION['admin']) {
-		$nav['管理中心'] = 'index.php?action=admin';
+		$nav['管理中心'] = 'index.php?action=Manage_website';
 		$nav['登出'] = 'index.php?action=logout';
 	} else {
-  	$nav['登录后台']='index.php?action=admin';
+  	$nav['登录后台']='index.php?action=login';
 	}
 }
 
