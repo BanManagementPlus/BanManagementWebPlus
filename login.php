@@ -11,7 +11,7 @@ if(empty($settings['password'])){
         redirect('index.php?action=login');
     } else {
         $_SESSION['admin'] = true;
-        redirect('index.php?action=admin');
+        redirect('index.php?action=Manage_website');
     }
 }
 ?>

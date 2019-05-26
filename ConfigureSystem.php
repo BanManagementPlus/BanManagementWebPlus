@@ -1,3 +1,4 @@
+<a href="index.php?action=Manage_website"><?php echo $language['back']; ?></a>
 <?php
 /*  BanManagement � 2012, a web interface for the Bukkit plugin BanManager
     by James Mortemore of http://www.frostcast.net

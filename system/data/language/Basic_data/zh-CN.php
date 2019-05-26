@@ -57,5 +57,6 @@ $language['No_servers_found!'] = '没有找到任何服务器！';
 $language['Configure_System'] = '系统设置';
 $language['System_settings_info'] = '这是有关系统的设置';
 $language['Server_Settings'] = '服务器设置';
-$language['Server_Settings_info'] = '这是有关服务器的设置'
+$language['Server_Settings_info'] = '这是有关服务器的设置';
+$language['back'] = '返回';
 ?>

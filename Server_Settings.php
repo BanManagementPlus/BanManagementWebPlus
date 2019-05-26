@@ -1,3 +1,4 @@
+<a href="index.php?action=Manage_website"><?php echo $language['back']; ?></a>
 <table class="table table-striped table-bordered" id="servers">
 		<thead>
 			<tr>
