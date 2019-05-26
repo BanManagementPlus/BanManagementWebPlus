@@ -63,7 +63,7 @@ function mysql_escape_mimic($inp) {
  */
 $in = array(&$_GET, &$_POST);
 if(get_magic_quotes_gpc()) {
-	while(list($k, $v) = each($in)) {
+	foreach($in as $k => $v) {
 		foreach($v as $key => $val) {
 			if(!is_array($val)) 
 				$in[$k][mysql_escape_mimic(htmlspecialchars(stripslashes($key), ENT_QUOTES))] = mysql_escape_mimic(htmlspecialchars(stripslashes($val), ENT_QUOTES));
@@ -72,7 +72,7 @@ if(get_magic_quotes_gpc()) {
 		}
 	}
 } else {
-	while(list($k, $v) = each($in)) {
+	foreach($in as $k => $v) {
 		foreach($v as $key => $val) {
 			if(!is_array($val))
 				$in[$k][mysql_escape_mimic(htmlspecialchars($key, ENT_QUOTES))] = mysql_escape_mimic(htmlspecialchars($val, ENT_QUOTES));
