@@ -1,4 +1,6 @@
-<a href="index.php?action=Manage_website"><?php echo $language['back']; ?></a>
+<a class="btn btn-primary" href="index.php?action=Manage_website"><?php echo $language['back']; ?></a>
+<br />
+<br />
 <table class="table table-striped table-bordered" id="servers">
 		<thead>
 			<tr>

@@ -4,7 +4,6 @@ $settings['utf8'] = true;
 $settings['latest_bans'] = true;
 $settings['latest_mutes'] = true;
 $settings['latest_warnings'] = true;
-$settings['servers'] = '';							#无需更改
 $settings['password'] = '13545';							#在这里设置你的管理员密码
 // 网站设置
 $settings['header_icon'] = '';                      #网站标题栏的图标如果为空,图标将会为默认图标

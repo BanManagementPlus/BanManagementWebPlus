@@ -55,8 +55,8 @@ $language['Search_for_a_Ban'] = '封禁查询';
 $language['No_servers_found!'] = '没有找到任何服务器！';
 // ConfigureSystem.php
 $language['Configure_System'] = '系统设置';
-$language['System_settings_info'] = '这是有关系统的设置';
+$language['System_settings_info'] = '这是有关系统的设置: 你可以设置用户查询、首页界面，也可以查看服务器的php和网站版本，甚至可以刷新和清除缓存';
 $language['Server_Settings'] = '服务器设置';
-$language['Server_Settings_info'] = '这是有关服务器的设置';
+$language['Server_Settings_info'] = '这是有关服务器的设置: 您可以添加、删除，可以查询封禁信息的服务器';
 $language['back'] = '返回';
 ?>
