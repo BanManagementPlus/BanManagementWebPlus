@@ -9,9 +9,13 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 <br />
 <h4>
     <img src="img/Server.jpg" width="30" height="30" />
-    <a href="index.php?action=Server_Settings"><?php echo $language['Server_Settings']; ?></a>
+    <a href="index.php?action=ServerSettings"><?php echo $language['Server_Settings']; ?></a>
     <h5><?php echo $language['Server_Settings_info']; ?></h5>
 </h4>
 <?php
+} else if(isset($_SESSION['admin']) != $_SESSION['admin']) {
+    echo '您的权限不足，如有需要请联系管理员获得';
+} else {
+    redirect('index.php?action=login');
 }
 ?>

@@ -612,7 +612,7 @@ $actions = array(
 	'login',
 	'Manage_website',
 	'ConfigureSystem',
-	'Server_Settings'
+	'ServerSettings'
 );
 
 // IE8 frame busting, well thats the only good thing it has :P (Now supported by Firefox woot)

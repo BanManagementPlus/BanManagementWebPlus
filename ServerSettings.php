@@ -1,4 +1,7 @@
 <a class="btn btn-primary" href="index.php?action=Manage_website"><?php echo $language['back']; ?></a>
+<?php
+if((isset($_SESSION['admin']) && $_SESSION['admin']) || (isset($_SESSION['admin_ServerSettings']) != $_SESSION['admin_ServerSettings'])) {
+?>
 <br />
 <br />
 <table class="table table-striped table-bordered" id="servers">
@@ -153,3 +156,10 @@
 			</div>
 		</form>
 	</div>
+<?php
+} else if(isset($_SESSION['admin_ServerSettings']) != $_SESSION['admin_ServerSettings']) {
+    echo '您的权限不足，如有需要请联系管理员获得';
+} else {
+    redirect('index.php?action=login');
+}
+?>

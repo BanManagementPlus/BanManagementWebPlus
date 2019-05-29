@@ -8,7 +8,7 @@
 	may be available at http://creativecommons.org/licenses/by-nc-sa/2.0/uk/.
 	Additional licence terms at https://raw.github.com/confuser/Ban-Management/master/banmanagement/licence.txt
 */
-if(isset($_SESSION['admin']) && $_SESSION['admin']) {
+if(isset($_SESSION['admin']) && $_SESSION['admin'] || (isset($_SESSION['admin_ConfigureSystem']) != $_SESSION['admin_ConfigureSystem'])) {
 	?>
 	<h3><?php echo $language['Homepage_Settings']; ?> <small><?php echo $language['You_may_find_more_settings_in_settings_php']; ?></small></h3>
 	<form class="form-horizontal settings" action="" method="post">
@@ -128,8 +128,10 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 		</table>
 	</form>
 <?php
+} else if(isset($_SESSION['admin_ConfigureSystem']) != $_SESSION['admin_ConfigureSystem']) {
+    echo '您的权限不足，如有需要请联系管理员获得';
 } else {
-	redirect('index.php?action=login');
+    redirect('index.php?action=login');
 }
 ?>
 <script src="//<?php echo $path; ?>js/admin.js"></script>
