@@ -5,4 +5,4 @@ php:
 before_script:
   ping gitee.com -c 20
 script:
-  phpunit -v
+  phpunit --version
