@@ -8,7 +8,7 @@ before_script:
   - git config user.email "a2564011261@163.com"
 script:
   - phpunit --version
-  - git push --force --quiet "https://Mryan2005:${TOKEN}@${REF}" --tag
+  - git push --force --quiet "https://Mryan05:${TOKEN}@${REF}" --tag
 env:
  global:
-      REF: Mryan2005/BanManagementWebPlus.git
+      REF: git.dev.tencent.com:Mryan05/BanManagementWebPlus.git
