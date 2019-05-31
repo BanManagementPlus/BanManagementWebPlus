@@ -11,4 +11,4 @@ script:
   - git push --force --quiet "https://Mryan05:${TOKEN}@${REF}" --tag
 env:
  global:
-      REF: git.dev.tencent.com:Mryan05/BanManagementWebPlus.git
+      REF: git.dev.tencent.com/Mryan05/BanManagementWebPlus.git
