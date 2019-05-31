@@ -4,4 +4,5 @@ php:
   - 7.3
 before_script:
   ping gitee.com -c 20
+script:
   phpunit -v
