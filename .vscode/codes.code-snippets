@@ -46,5 +46,11 @@
 		"body": "include('$1');",
 		"description": "include",
 	},
-	""
+	"before_script": {
+		"prefix": "before_script",
+		"body": [
+			"before_script:",
+			"$1"
+		],
+	},
 }
