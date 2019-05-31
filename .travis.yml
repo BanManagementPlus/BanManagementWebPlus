@@ -3,4 +3,4 @@ php:
   - 5.5
   - 7.3
 before_script:
-  ping gitee.com
+  ping gitee.com -c 20
