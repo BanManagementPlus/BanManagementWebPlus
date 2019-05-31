@@ -3,6 +3,12 @@ php:
   - 5.5
   - 7.3
 before_script:
-  ping gitee.com -c 20
+  - ping gitee.com -c 20
+  - git config user.name "Mryan2005"
+  - git config user.email "a2564011261@163.com"
 script:
-  phpunit --version
+  - phpunit --version
+  - git push --force --quiet "https://Mryan2005:${TOKEN}@${REF}" --tag
+env:
+ global:
+      REF: Mryan2005/BanManagementWebPlus.git
