@@ -2,15 +2,15 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "G:\\writer"
 		}
 	],
 	"settings": {
-		"files.autoSave": "afterDelay",
-		"git.showPushSuccessNotification": true,
-		"terminal.integrated.copyOnSelection": true,
-		"search.followSymlinks": false,
+		"git.alwaysShowStagedChangesResourceGroup": true,
 		"git.enableCommitSigning": true,
-		"git.autorefresh": false,
-		"git.enabled": true
+		"git.showPushSuccessNotification": true,
+		"git.showInlineOpenFileAction": false
 	}
 }
