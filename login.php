@@ -7,7 +7,7 @@ if(empty($settings['password'])){
     <button type="submit" class="btn"><?php echo $language['Sign_In']; ?></button>
     </form><?php
 } else if(isset($_POST['password']) && !isset($_SESSION['admin'])) {
-    if(htmlspecialchars_decode($_POST['password'], ENT_QUOTES) != $settings['password']) {
+    if(md5(htmlspecialchars_decode($_POST['password'], ENT_QUOTES)) != md5($settings['password'])) {
         redirect('index.php?action=login');
     } else {
         $_SESSION['admin'] = true;
