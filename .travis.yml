@@ -7,8 +7,11 @@ before_script:
   - git config user.name "Mryan2005"
   - git config user.email "a2564011261@163.com"
 script:
+  - rm -rf ./.git
+  - git init
+  - git remote add origin https://git.dev.tencent.com/Mryan05/BanManagementWebPlus.git
   - phpunit --version
-  - git push --force --quiet "https://Mryan05:${TOKEN}@${REF}" --tag
+  - git push --quiet "https://Mryan05:${TOKEN}@${REF}" --tag
 env:
  global:
       REF: git.dev.tencent.com/Mryan05/BanManagementWebPlus.git
