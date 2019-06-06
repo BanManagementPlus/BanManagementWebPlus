@@ -11,6 +11,7 @@
 		"git.alwaysShowStagedChangesResourceGroup": true,
 		"git.enableCommitSigning": true,
 		"git.showPushSuccessNotification": true,
-		"git.showInlineOpenFileAction": false
+		"git.showInlineOpenFileAction": false,
+		"terminal.integrated.cursorBlinking": true
 	}
 }
