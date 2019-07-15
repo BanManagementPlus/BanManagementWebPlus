@@ -9,7 +9,11 @@
 */
 if($settings['password'] == '')
 	errors('您没有输入管理员密码，请输入密码！');
-else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4) {
+else if($settings['password'] != '') {
+	$salt = rand(1,99999999999);
+	$password = crypt($settings['password'],$salt);
+	unset($settings['password']);
+} else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4) {
 	die('您没有设置密码或您的密码不正确，请稍后在尝试！');
 	if($_SESSION['failed_attempt'] < time())
 		unset($_SESSION['failed_attempts']);
@@ -19,7 +23,7 @@ else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4)
     <button type="submit" class="btn">登录</button>
     </form><?php
 } else if(isset($_POST['password']) && !isset($_SESSION['admin'])) {
-	if(md5(MD5(htmlspecialchars_decode($_POST['password'], ENT_QUOTES)).$salt) != md5(md5($settings['password']).$salt)) {
+	if(crypt(htmlspecialchars_decode($_POST['password'], ENT_QUOTES),$salt) != $password) {
 		//set how long we want them to have to wait after 5 wrong attempts
 		$time = 1800; //make them wait 30 mins
 		if(isset($_SESSION['failed_attempts']))
