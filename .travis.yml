@@ -7,7 +7,6 @@ script:
 - phpunit BanManagementWebPlus
 - phpunit --version
 - cd BanManagementWebPlus
-- git push --force --quiet "https://Mryan05:${TOKEN}@${REF}" master:master --tag
 deploy:
   provider: releases
   api_key:
