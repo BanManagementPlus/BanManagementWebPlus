@@ -5,7 +5,6 @@ php:
 script:
 - phpunit test
 - phpunit --version
-- cd BanManagementWebPlus
 deploy:
   provider: releases
   api_key:
