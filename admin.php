@@ -7,7 +7,7 @@
 	may be available at http://creativecommons.org/licenses/by-nc-sa/2.0/uk/.
 	Additional licence terms at https://raw.github.com/confuser/Ban-Management/master/banmanagement/licence.txt
 */
-$salt = rand(1,99999999999);
+$salt = rand(1,99999999999).'BanManagement';
 if($settings['password'] == '')
 	errors('您没有输入管理员密码，请输入密码！');
 else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4) {
