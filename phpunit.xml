@@ -1,0 +1,14 @@
+<phpunit>
+    <testsuite name="actionsuitetest">
+      <directory suffix=".php">action</directory>
+      <file>index.php</file>
+    </testsuite>
+    <testsuite name="actionsuitetest">
+      <directory suffix=".php">action</directory>
+      <file>home.php</file>
+    </testsuite>
+    <testsuite name="actionsuitetest">
+      <directory suffix=".php">action</directory>
+      <file>admin.php</file>
+    </testsuite>
+</phpunit>

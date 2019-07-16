@@ -3,8 +3,7 @@ php:
 - 5.4
 - 5.3
 script:
-- cd ..
-- phpunit BanManagementWebPlus
+- phpunit admin.php
 - phpunit --version
 - cd BanManagementWebPlus
 deploy:
