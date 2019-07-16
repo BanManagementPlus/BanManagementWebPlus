@@ -7,13 +7,10 @@
 	may be available at http://creativecommons.org/licenses/by-nc-sa/2.0/uk/.
 	Additional licence terms at https://raw.github.com/confuser/Ban-Management/master/banmanagement/licence.txt
 */
+$salt = rand(1,99999999999);
 if($settings['password'] == '')
 	errors('您没有输入管理员密码，请输入密码！');
-else if($settings['password'] != '') {
-	$salt = rand(1,99999999999);
-	$password = crypt($settings['password'],$salt);
-	unset($settings['password']);
-} else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4) {
+else if(isset($_SESSION['failed_attempts']) && $_SESSION['failed_attempts'] > 4) {
 	die('您没有设置密码或您的密码不正确，请稍后在尝试！');
 	if($_SESSION['failed_attempt'] < time())
 		unset($_SESSION['failed_attempts']);
@@ -23,7 +20,7 @@ else if($settings['password'] != '') {
     <button type="submit" class="btn">登录</button>
     </form><?php
 } else if(isset($_POST['password']) && !isset($_SESSION['admin'])) {
-	if(crypt(htmlspecialchars_decode($_POST['password'], ENT_QUOTES),$salt) != $password) {
+	if(crypt(htmlspecialchars_decode($_POST['password'], ENT_QUOTES),$salt) != crypt($settings['password'],$salt)) {
 		//set how long we want them to have to wait after 5 wrong attempts
 		$time = 1800; //make them wait 30 mins
 		if(isset($_SESSION['failed_attempts']))
@@ -331,9 +328,14 @@ else if($settings['password'] != '') {
 	</form>
 	<br />
 	<br />
+	
+	
 	<h3>其它事务</h3>
-	<a href="index.php?action=deletecache&authid=<?php echo sha1($settings['password']); ?>" class="btn btn-primary">清理缓存</a>
 	<?php
+	/*
+	echo '<a href="index.php?action=deletecache&authid="'.sha1($settings['password']).'class="btn btn-primary">清理缓存</a>';
+	*/
+	echo '<h5>目前未设</h5>';
 }
 ?>
 <script src="//<?php echo $path; ?>js/admin.js"></script>
