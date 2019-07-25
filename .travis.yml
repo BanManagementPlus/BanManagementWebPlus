@@ -7,7 +7,6 @@ services:
 script:
 - phpunit --version
 - docker build -t banmanagementplus/banmanagementwebplus
-
 deploy:
   - provider: releases
     api_key:
@@ -23,6 +22,6 @@ deploy:
     on:
       branch: Dev
   - provider: script
-      script: bash docker_push.sh
-      on:
-        branch: master
+    script: bash docker_push.sh
+    on:
+      tags: true
