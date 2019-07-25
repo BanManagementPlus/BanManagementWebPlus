@@ -12,7 +12,9 @@
 			<footer>
 				<p class="pull-left"><?php echo $settings['footer']; ?></p>
 				<!-- Must not be removed as per the licence terms -->
-				<p class="pull-right">技术&汉化 By <a href="http://www.mcbbs.net/uc_server/avatar.php?uid=1691353&size=small" target="_blank">Xiao_Fang_He</a></p>
+				<p class="pull-right">
+					技术&汉化 By <a href="http://www.mcbbs.net/uc_server/avatar.php?uid=1691353&size=small" target="_blank">Xiao_Fang_He</a>
+				</p>
 			</footer>
 		</div> <!-- /container -->
 		<script type="text/javascript">
