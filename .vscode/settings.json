@@ -1,7 +1,8 @@
 {
     "files.autoSave": "afterDelay",
-    "editor.cursorStyle": "block",
     "git.allowForcePush": true,
     "git.enableCommitSigning": true,
-    "git.showPushSuccessNotification": true
+    "git.showPushSuccessNotification": true,
+    "editor.cursorBlinking": "solid",
+    "editor.cursorSmoothCaretAnimation": true
 }
