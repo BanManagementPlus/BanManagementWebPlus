@@ -7,6 +7,7 @@
 	may be available at http://creativecommons.org/licenses/by-nc-sa/2.0/uk/.
 	Additional licence terms at https://raw.github.com/confuser/Ban-Management/master/banmanagement/licence.txt
 */
+
 $nav = array(
 	'首页' => 'index.php',
 	'服务器列表' => 'index.php?action=servers'
@@ -15,7 +16,7 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 	$nav['管理中心'] = 'index.php?action=admin';
 	$nav['登出'] = 'index.php?action=logout';
 } else {
-  $nav['登录后台']='index.php?action=admin';
+  	$nav['登录后台']='index.php?action=admin';
 }
 
 
@@ -25,7 +26,7 @@ $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Ban Management - 玩家封禁系统</title>
+		<title>Ban Management | 玩家封禁系统</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		<meta name="author" content="">
@@ -40,14 +41,18 @@ $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME
 		<!--[if lt IE 9]>
 		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<script src="https://cdn.bootcss.com/jquery/1.7.2/jquery.min.js"></script>
-		<script src="//<?php echo $path; ?>js/bootstrap.min.js"></script>
-		<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+		<?php
+		function script($input){
+			foreach($input as $i){
+				echo '<script src='.$i.'</script>';
+			}
+		}
+		script($js_online);
+		?>
 		<script src="//<?php echo $path; ?>js/heartcode-canvasloader-min.js"></script>
 		<script src="//<?php echo $path; ?>js/jquery.countdown.min.js"></script>
 		<script src="//<?php echo $path; ?>js/jquery.tablesorter.min.js"></script>
-		<script src="//<?php echo $path; ?>js/jquery.tablesorter.widgets.min.js"></script>
-		<script src="//<?php echo $path; ?>js/jquery.tablesorter.pager.min.js"></script><?php
+		<script src="//<?php echo $path; ?>js/jquery.tablesorter.widgets.min.js"></script><?php
 if((isset($settings['iframe_protection']) && $settings['iframe_protection']) || !isset($settings['iframe_protection'])) {
 	echo '
 		<script type="text/javascript">
@@ -85,9 +90,9 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 						<?php
 						$request = basename($_SERVER['REQUEST_URI']);
 						foreach($nav as $name => $link) {
-							?><li<?php
+							?><li <?php
 							if($request == $link)
-								echo ' class="active"';
+								echo 'class="active"';
 							?>><a href="<?php echo $link; ?>"><?php echo $name ?></a><?php
 						}
 						?>
