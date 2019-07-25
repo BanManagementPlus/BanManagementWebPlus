@@ -1,8 +1,9 @@
 language: Python
 Python: 3.6
-script:
-- phpunit test
-- phpunit --version
+script: true
+branches:
+  only:
+  - Dev
 jobs:
   include:
     - stage: Deploy Tag
