@@ -1,0 +1,15 @@
+_site
+.gh-pages
+.idea
+.php_cs.cache
+apigen.phar
+box.phar
+build
+composer.lock
+composer.phar
+phpunit.xml
+t.php
+vendor/
+*.iml
+*.sw?
+*.old
