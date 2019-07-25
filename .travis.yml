@@ -6,7 +6,8 @@ script:
 jobs:
   include:
     - stage: Deploy Tag
-      script: skip
+      Python: 3.6
+      script: true
       deploy:
         provider: releases
           api_key:
@@ -16,7 +17,8 @@ jobs:
         on:
         tags: true
     - stage: Deploy Branch
-      script: skip
+      Python: 3.6
+      script: true
       deploy:
         provider: pages
         skip_cleanup: true
