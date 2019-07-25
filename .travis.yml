@@ -2,13 +2,21 @@ language: php
 php:
 - '5.4'
 - '5.6'
+services:
+  - docker
 script:
 - phpunit --version
 deploy:
-  provider: releases
-  api_key:
-    secure: RxtbpFnVpId+M1LYYXsKz1HbsT2I3AcXxJmprYtJqXfstsa1Oj0q9tTlFuFKG9pQqg+6vIbYeMv1uPFcL45RC3w56nPcaVV2sPowEpUGSuWVPCbljdglcNw8wUPI70EBBVce5NB5R4D0Mgm0LRvfob8yfrJ9hRQW5kxbHZDIjLCWQ9sMRVJVTTY854ehBe64Wi1WS6nRIhZaoDy5xhJC6y1rSW9w9bTbrBbsXhIBs+DB8Ogwgyhq7vhAg5/OEWq4XZBFlyBCwnfXuidjpOoxl9EDlx1Bl9jajmV+GOm932NncCX1yZr5Ai8DCTAkNSR2woOV1lsSgqH+f1I9e1Tl7ejjkeYlqsZrLz4GmSaBNIhvz2XNO5UU2MauPh2qDnHkP8RYfZ03tDl/CFGLqoKbzaQ1J4lDkbEUnDZ8YL2likTKH+3mVgYNW656XH5gzlQTDRCHmWxpivlYGbOMrqNWHinOzgUlGXBX6/JyZace4Ft18qSNRFe2MwpTpDJu1iDPWGq/d8sWe/EWWqsL5/UU4cF7OWGv+lppwIhMUEAE6FtQxT2lW4W66uNBNolJGZiwP4DHX9xq8AzMc9l++q6y8hNX61+x4AHCigozXO/NKMzCDAaKmRkIdRif7tRVOISs1DJ1u6OXLY+2UwJ5kK29AcH/Lf9juVUFAZ7347vFglI=
-  file: import.sql
-  skip_cleanup: true
-  on:
-    tags: true
+  - provider: releases
+    api_key:
+      secure: RxtbpFnVpId+M1LYYXsKz1HbsT2I3AcXxJmprYtJqXfstsa1Oj0q9tTlFuFKG9pQqg+6vIbYeMv1uPFcL45RC3w56nPcaVV2sPowEpUGSuWVPCbljdglcNw8wUPI70EBBVce5NB5R4D0Mgm0LRvfob8yfrJ9hRQW5kxbHZDIjLCWQ9sMRVJVTTY854ehBe64Wi1WS6nRIhZaoDy5xhJC6y1rSW9w9bTbrBbsXhIBs+DB8Ogwgyhq7vhAg5/OEWq4XZBFlyBCwnfXuidjpOoxl9EDlx1Bl9jajmV+GOm932NncCX1yZr5Ai8DCTAkNSR2woOV1lsSgqH+f1I9e1Tl7ejjkeYlqsZrLz4GmSaBNIhvz2XNO5UU2MauPh2qDnHkP8RYfZ03tDl/CFGLqoKbzaQ1J4lDkbEUnDZ8YL2likTKH+3mVgYNW656XH5gzlQTDRCHmWxpivlYGbOMrqNWHinOzgUlGXBX6/JyZace4Ft18qSNRFe2MwpTpDJu1iDPWGq/d8sWe/EWWqsL5/UU4cF7OWGv+lppwIhMUEAE6FtQxT2lW4W66uNBNolJGZiwP4DHX9xq8AzMc9l++q6y8hNX61+x4AHCigozXO/NKMzCDAaKmRkIdRif7tRVOISs1DJ1u6OXLY+2UwJ5kK29AcH/Lf9juVUFAZ7347vFglI=
+    file: import.sql
+    skip_cleanup: true
+    on:
+      tags: true
+  - provider: pages
+    skip_cleanup: true
+    github_token: ${GITHUB_TOKEN}  # Set in the settings page of your repository, as a secure variable
+    keep_history: true
+    on:
+      branch: Dev
