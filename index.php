@@ -17,6 +17,30 @@ if(!isset($_SESSION['initiated'])) {
 
 define('IN_PATH', realpath('.') . '/'); // This allows us to use absolute urls
 
+function online_src($input,$type){
+	if($type == 'js'){
+		foreach($input as $i){
+			echo '<script src='.$i.'</script>';
+		}
+	} else if ($type == 'css') {
+		foreach($input as $i){
+			echo '<link src='.$i.'</link>';
+		}
+	} else if($type == 'Js'){
+		foreach($input as $i){
+			echo '<script src='.$i.'</script>';
+		}
+	} else if($type == 'JS'){
+		foreach($input as $i){
+			echo '<script src='.$i.'</script>';
+		}
+	} else if($type == 'CSS'){
+		foreach($input as $i){
+			echo '<link src='.$i.'</link>';
+		}
+	} 
+}
+
 /**
  * Snippet from php.net by bohwaz
  * below function kills register globals

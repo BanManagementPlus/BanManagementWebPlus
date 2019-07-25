@@ -42,12 +42,8 @@ $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME
 		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<?php
-		function script($input){
-			foreach($input as $i){
-				echo '<script src='.$i.'</script>';
-			}
-		}
-		script($js_online);
+		
+		online_src($js_online,'js');
 		?>
 		<script src="//<?php echo $path; ?>js/heartcode-canvasloader-min.js"></script>
 		<script src="//<?php echo $path; ?>js/jquery.countdown.min.js"></script>
