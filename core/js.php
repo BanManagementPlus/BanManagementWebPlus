@@ -10,5 +10,5 @@ $js_online = array(
     'https://www.jq22.com/jquery/html5.min.js',
     'https://www.jq22.com/jquery/jquery-migrate-1.2.1.min.js',
     'https://cdn.staticfile.org/jquery.tablesorter/2.31.1/js/extras/jquery.tablesorter.pager.min.js',
-    'https://cdn.staticfile.org/jquery/3.4.1/core.js',
+    //'https://cdn.staticfile.org/jquery/3.4.1/core.js',
 );
