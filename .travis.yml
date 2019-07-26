@@ -6,7 +6,7 @@ services:
   - docker
 script:
 - phpunit --version
-- docker build -t banmanagementplus/banmanagementwebplus:V${TRAVIS_JOB_NUMBER}
+- docker build -t banmanagementwebplus:V${TRAVIS_JOB_NUMBER}
 deploy:
   - provider: releases
     api_key: ${GITHUB_TOKEN}
