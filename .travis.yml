@@ -6,8 +6,9 @@ services:
   - docker
 script:
 - phpunit --version
+# test image
 - docker build -t banmanagementwebplus .
-- docker run -i -t -d banmanagementwebplus:latest
+- docker run --name banmanagementwebplus -d banmanagementwebplus:latest
 - docker ps -a
 deploy:
   - provider: releases

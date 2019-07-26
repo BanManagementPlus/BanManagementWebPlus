@@ -1,3 +1,4 @@
-FROM dzer/lnmp:latest
-MAINTAINER Mryan2005 <A2564011261@163.com>
-EXPOSE 80 443 
+FROM rosti/php:5.4
+MAINTAINER Mryan2005
+WORKDIR ../BanManagementWebPlus
+EXPOSE 80
