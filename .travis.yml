@@ -9,6 +9,7 @@ script:
 - docker build -t banmanagementwebplus .
 - docker run -i -t -d banmanagementwebplus:latest
 - docker ps -a
+- sudo apt-get install tree
 - tree
 - cd ..
 -tree
