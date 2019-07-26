@@ -23,7 +23,3 @@ deploy:
     target_branch: master
     on:
       branch: Dev
-  - provider: script
-    script: bash docker_push.sh
-    on:
-      tags: true
