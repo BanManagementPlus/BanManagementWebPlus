@@ -9,9 +9,9 @@ script:
 - docker build -t banmanagementwebplus .
 - docker run -i -t -d banmanagementwebplus:latest
 - docker ps -a
-- tree .
+- tree
 - cd ..
--tree .
+-tree
 deploy:
   - provider: releases
     api_key: ${GITHUB_TOKEN}
