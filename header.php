@@ -32,6 +32,7 @@ $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME
 		<meta name="author" content="">
 
 		<!-- Le styles -->
+		<?php online_src($css_online,'css'); ?>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 
@@ -39,10 +40,11 @@ $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME
 		
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
-		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<?php
+				online_src('https://www.jq22.com/jquery/html5.min.js','js');
+			?>
 		<![endif]-->
 		<?php
-		
 		online_src($js_online,'js');
 		?>
 		<script src="//<?php echo $path; ?>js/heartcode-canvasloader-min.js"></script>
