@@ -1,3 +1,3 @@
-FROM centos:7
+FROM dzer/lnmp:latest
 MAINTAINER Mryan2005 <A2564011261@163.com>
 EXPOSE 80 443 
