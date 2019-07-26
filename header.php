@@ -32,7 +32,6 @@ $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME
 		<meta name="author" content="">
 
 		<!-- Le styles -->
-		<?php online_src($css_online,'css'); ?>
 		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 
