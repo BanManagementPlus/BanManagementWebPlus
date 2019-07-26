@@ -12,7 +12,7 @@ script:
 - sudo apt-get install tree
 - tree
 - cd ..
--tree
+- tree
 deploy:
   - provider: releases
     api_key: ${GITHUB_TOKEN}
