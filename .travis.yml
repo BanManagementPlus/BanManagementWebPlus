@@ -8,7 +8,6 @@ script:
 - phpunit --version
 # test image
 - docker build -t banmanagementwebplus .
-- docker run -d banmanagementwebplus:latest
 - docker ps -a
 deploy:
   - provider: releases
