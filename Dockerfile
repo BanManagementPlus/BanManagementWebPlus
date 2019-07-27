@@ -1,4 +1,4 @@
 FROM rosti/php:5.4
-MAINTAINER Mryan2005
-WORKDIR ../BanManagementWebPlus
+COPY . ../BanManagementWebPlus
+WORKDIR /BanManagementWebPlus
 EXPOSE 80
