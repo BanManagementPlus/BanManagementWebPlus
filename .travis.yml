@@ -8,12 +8,13 @@ script:
 - phpunit --version
 # test image
 - docker build -t banmanagementwebplus .
-- docker run --name banmanagementwebplus -d banmanagementwebplus:latest
 - docker ps -a
 deploy:
   - provider: releases
     api_key: ${GITHUB_TOKEN}
-    file: import.sql
+    file: 
+      - import.sql
+      - BanManagement_plugin.zip
     skip_cleanup: true
     on:
       tags: true
