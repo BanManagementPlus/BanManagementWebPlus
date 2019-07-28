@@ -1,6 +1,5 @@
 FROM ubuntu:latest
 RUN apt-get update
-RUN apt-get install python-software-properties 
 RUN add-apt-repository ppa:yola/php5
 RUN apt-get update
 RUN apt-get install apt-get install php5-fpm
