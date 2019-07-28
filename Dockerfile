@@ -1,8 +1,6 @@
 FROM ubuntu:latest
 RUN apt-get update
-RUN add-apt-repository ppa:yola/php5
-RUN apt-get update
-RUN apt-get install apt-get install php5-fpm
+RUN apt-get install php5-fpm
 RUN apt-get install nginx
 RUN apt-get install git
 RUN /etc/init.d/php5-fpm start
