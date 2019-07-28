@@ -6,8 +6,8 @@ services:
   - docker
 script:
 - phpunit --version
+# test image
 - docker build -t banmanagementwebplus .
-- docker run -i -t -d banmanagementwebplus:latest
 - docker ps -a
 - sudo apt-get install tree
 - tree
@@ -16,7 +16,9 @@ script:
 deploy:
   - provider: releases
     api_key: ${GITHUB_TOKEN}
-    file: import.sql
+    file: 
+      - import.sql
+      - BanManagement_plugin.zip
     skip_cleanup: true
     on:
       tags: true
@@ -24,10 +26,6 @@ deploy:
     skip_cleanup: true
     github_token: ${GITHUB_TOKEN}  # Set in the settings page of your repository, as a secure variable
     keep_history: true
-    target_branch: passed
+    target_branch: master
     on:
       branch: Dev
-  - provider: script
-    script: bash docker_push.sh
-    on:
-      tags: true

@@ -18,7 +18,9 @@ if(isset($_SESSION['admin']) && $_SESSION['admin']) {
 } else {
   	$nav['登录后台']='index.php?action=admin';
 }
-
+if($settings['title'] == ''){
+	$settings['title'] = 'Ban Management | 玩家封禁系统';
+}
 
 $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME']);
 ?>
@@ -39,10 +41,11 @@ $path = $_SERVER['HTTP_HOST'].str_replace('index.php', '', $_SERVER['SCRIPT_NAME
 		
 		<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
-		  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+			<?php
+				online_src('https://www.jq22.com/jquery/html5.min.js','js');
+			?>
 		<![endif]-->
 		<?php
-		
 		online_src($js_online,'js');
 		?>
 		<script src="//<?php echo $path; ?>js/heartcode-canvasloader-min.js"></script>

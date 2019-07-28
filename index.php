@@ -9,7 +9,8 @@
 */
 session_start();
 ob_start();
-include('./core/js.php');
+require('./core/inside_settings.php');
+require('./core/online_src.php');
 if(!isset($_SESSION['initiated'])) {
     session_regenerate_id();
     $_SESSION['initiated'] = true;
